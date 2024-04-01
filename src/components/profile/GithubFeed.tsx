@@ -67,7 +67,11 @@ const GithubFeed = (props: Props) => {
         >
           {feedData.length &&
             feedData?.map((feed) => {
-              return <div>{feed.payload.commits?.map((s) => s.message)}</div>;
+              return (
+                <div key={feed.id}>
+                  {feed.payload.commits?.map((s) => s.message)}
+                </div>
+              );
             })}
         </ScrollArea>
       </Inset>
