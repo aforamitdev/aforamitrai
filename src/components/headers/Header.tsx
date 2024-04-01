@@ -12,7 +12,7 @@ type Props = {};
 const Header = (props: Props) => {
   return (
     <>
-      <div className='flex justify-between  w-full  border mt-10 px-3 py-2 rounded-lg items-center  mx-4 md:mx-0'>
+      <div className='flex justify-between  w-full  border mt-10 px-3 py-2 rounded-lg items-center  mx-4 '>
         <div className='gap-x-2 flex items-center'>
           <Avatar fallback='AR' />
           {/*           
@@ -21,9 +21,21 @@ const Header = (props: Props) => {
           </Text> */}
         </div>
         <div className='flex gap-x-6'>
-          <HeaderLink Icon={<RiHome6Line size='22' />} title='Amit Rai' />
-          <HeaderLink Icon={<CgProfile size='22' />} title='about' />
-          <HeaderLink Icon={<GoProjectSymlink size='22' />} title='Projects' />
+          <HeaderLink
+            Icon={<RiHome6Line size='22' />}
+            title='Amit Rai'
+            link='/'
+          />
+          <HeaderLink
+            Icon={<CgProfile size='22' />}
+            title='About'
+            link='/about'
+          />
+          <HeaderLink
+            Icon={<GoProjectSymlink size='22' />}
+            title='Projects'
+            link='/projects'
+          />
         </div>
         <div>
           <HireMe />

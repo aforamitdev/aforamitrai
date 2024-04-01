@@ -5,7 +5,9 @@ import Email from '@/components/hire/Email';
 import HireMe from '@/components/hire/HireMe';
 import ScreenCard from '@/components/home/ScreenCard';
 import Profile from '@/components/profile/Profile';
+import ProfileContainer from '@/components/profile/ProfileContainer';
 import Project from '@/components/projects/Project';
+import ProjectContainer from '@/components/projects/ProjectContainer';
 import SmoothScrolling from '@/components/scroll/SmootScroll';
 import {
   Avatar,
@@ -19,6 +21,7 @@ import {
   Text,
   ThemePanel,
 } from '@radix-ui/themes';
+import Link from 'next/link';
 import { BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 import {
@@ -33,56 +36,16 @@ export default function Home() {
     <main className='flex max-w-7xl mx-auto  font-poppins'>
       {/* <ThemePanel /> */}
       <div className='flex w-full flex-col'>
-        <div className='flex w-full'>
+        <div className='flex w-full '>
           <Header />
         </div>
         <div className='mx-4 py-2'>
-          <Card className='flex flex-col'>
-            <div className='flex justify-between py-3'>
-              <div className='flex items-center text-base text-gray-700'>
-                <GoDotFill />
-                Product Developer
-              </div>
-              <div
-                className='text-xs uppercase  items-center flex px-2 rounded-full text-green-700  font-bold'
-                style={{ background: 'rgba(40, 199, 128, 0.15)' }}
-              >
-                <GoDotFill />
-                Available for work
-              </div>
+          <Card className='flex '>
+            <div className='flex  flex-col '>
+              <ProfileContainer />
+              <ProjectContainer />
             </div>
-            <Profile />
-            {/* hire me  */}
-            <Flex className='flex gap-x-3 justify-between items-center'>
-              <HireMe />
-              <Email />
-            </Flex>
 
-            <div className='flex pt-10  items-center'>
-              <Card className='w-full '>
-                <Inset className='bg-gray-200 px-5'>
-                  <Box
-                    // style={{ backgroundColor: '#5151CD', opacity: 0.2 }}
-                    className='w-full  py-2  '
-                    // inset={'2'}
-                  >
-                    <div className='flex justify-between items-center'>
-                      <div className='flex items-center text-base text-gray-700'>
-                        <GoDotFill /> <Text> Projects </Text>
-                      </div>
-                      <Button>
-                        View All <GoChevronRight />{' '}
-                      </Button>
-                    </div>
-                  </Box>
-
-                  <div>
-                    <Project />
-                  </div>
-                </Inset>
-              </Card>
-            </div>
-            {/* Projects  */}
             <div className='py-10  '>
               <div className='flex justify-center flex-col items-center'>
                 <div>
