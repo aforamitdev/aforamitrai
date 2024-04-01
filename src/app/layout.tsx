@@ -4,7 +4,6 @@ import './globals.css';
 import '@radix-ui/themes/styles.css';
 import { Theme, ThemePanel } from '@radix-ui/themes';
 import { AnimatePresence } from 'framer-motion';
-import TranslationProvider from '../components/TranslationProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Theme accentColor='iris' panelBackground='solid'>
-          <TranslationProvider>{children}</TranslationProvider>
+          {children}
         </Theme>
       </body>
     </html>
