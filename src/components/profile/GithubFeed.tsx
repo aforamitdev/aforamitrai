@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GithubFeed } from '../../../types/type';
+import { IGithubFeed } from '../../../types/type';
 import {
   Box,
   Inset,
@@ -13,7 +13,7 @@ import { GoDotFill } from 'react-icons/go';
 type Props = {};
 
 const GithubFeed = (props: Props) => {
-  const [feedData, setData] = useState<GithubFeed[]>([]);
+  const [feedData, setData] = useState<IGithubFeed[]>([]);
   const getData = async () => {
     const response = await fetch(
       '  https://api.github.com/users/aforamitdev/events',
