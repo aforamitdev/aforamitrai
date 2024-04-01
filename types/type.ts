@@ -1,4 +1,4 @@
-export interface GithubFeed {
+export interface IGithubFeed {
   id: string;
   type: Type;
   actor: Actor;
