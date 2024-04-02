@@ -16,6 +16,7 @@ import Comments from './Commits';
 import Commits from './Commits';
 import { BsGithub, BsNewspaper, BsStackOverflow } from 'react-icons/bs';
 import { CgWebsite } from 'react-icons/cg';
+import StackOverflow from '../stackoverflow/StackOverflow';
 
 type Props = {};
 
@@ -76,7 +77,6 @@ const GithubFeed = (props: Props) => {
                 >
                   {feedData.length &&
                     feedData.map((feed, index) => {
-                      console.log(feed);
                       return (
                         <div key={feed.id}>
                           <Commits commit={feed} index={index} />
@@ -88,7 +88,7 @@ const GithubFeed = (props: Props) => {
             </Tabs.Content>
 
             <Tabs.Content value='stackoverflow'>
-              <Text size='2'>Under construction</Text>
+              <StackOverflow />
             </Tabs.Content>
 
             <Tabs.Content value='blog'>
