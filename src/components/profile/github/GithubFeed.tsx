@@ -14,7 +14,8 @@ import {
 import { GoDotFill } from 'react-icons/go';
 import Comments from './Commits';
 import Commits from './Commits';
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsNewspaper, BsStackOverflow } from 'react-icons/bs';
+import { CgWebsite } from 'react-icons/cg';
 
 type Props = {};
 
@@ -48,11 +49,21 @@ const GithubFeed = (props: Props) => {
             <Tabs.Trigger value='github'>
               <Button variant='ghost'>
                 <BsGithub />
-                Github
+                <Text color='gray'> Github</Text>
               </Button>
             </Tabs.Trigger>
-            <Tabs.Trigger value='comments'>Comments</Tabs.Trigger>
-            <Tabs.Trigger value='settings'>Settings</Tabs.Trigger>
+            <Tabs.Trigger value='stackoverflow'>
+              <Button variant='ghost'>
+                <BsStackOverflow />
+                <Text color='gray'>Stack Overflow</Text>
+              </Button>
+            </Tabs.Trigger>
+            <Tabs.Trigger value='blog'>
+              <Button variant='ghost'>
+                <CgWebsite />
+                <Text color='gray'>Blog</Text>
+              </Button>
+            </Tabs.Trigger>
           </Tabs.List>
 
           <Box>
@@ -76,11 +87,11 @@ const GithubFeed = (props: Props) => {
               </Text>
             </Tabs.Content>
 
-            <Tabs.Content value='comments'>
+            <Tabs.Content value='stackoverflow'>
               <Text size='2'>Access and update your documents.</Text>
             </Tabs.Content>
 
-            <Tabs.Content value='settings'>
+            <Tabs.Content value='blog'>
               <Text size='2'>
                 Edit your profile or update contact information.
               </Text>
