@@ -72,7 +72,7 @@ const GithubFeed = (props: Props) => {
                 <ScrollArea
                   type='always'
                   scrollbars='vertical'
-                  style={{ height: '288px' }}
+                  style={{ height: '242px' }}
                 >
                   {feedData.length &&
                     feedData.map((feed, index) => {
@@ -88,13 +88,11 @@ const GithubFeed = (props: Props) => {
             </Tabs.Content>
 
             <Tabs.Content value='stackoverflow'>
-              <Text size='2'>Access and update your documents.</Text>
+              <Text size='2'>Under construction</Text>
             </Tabs.Content>
 
             <Tabs.Content value='blog'>
-              <Text size='2'>
-                Edit your profile or update contact information.
-              </Text>
+              <Text size='2'>Under construction..</Text>
             </Tabs.Content>
           </Box>
         </Inset>
