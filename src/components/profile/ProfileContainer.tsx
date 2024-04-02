@@ -4,7 +4,7 @@ import Profile from './Profile';
 import { Card, Flex } from '@radix-ui/themes';
 import HireMe from '../hire/HireMe';
 import Email from '../hire/Email';
-import GithubFeed from './GithubFeed';
+import GithubFeed from './github/GithubFeed';
 
 type Props = {};
 
