@@ -44,26 +44,26 @@ const GithubFeed = (props: Props) => {
         <GoDotFill />
         Current Activities
       </div> */}
-      <Tabs.Root defaultValue='github'>
+      <Tabs.Root defaultValue='github' onChange={(e) => console.log(e)}>
         <Inset>
-          <Tabs.List>
+          <Tabs.List color='iris'>
             <Tabs.Trigger value='github'>
-              <Button variant='ghost'>
+              <div className='flex items-center gap-x-2'>
                 <BsGithub />
                 <Text color='gray'> Github</Text>
-              </Button>
+              </div>
             </Tabs.Trigger>
             <Tabs.Trigger value='stackoverflow'>
-              <Button variant='ghost'>
+              <div className='flex items-center gap-x-2'>
                 <BsStackOverflow />
                 <Text color='gray'>Stack Overflow</Text>
-              </Button>
+              </div>
             </Tabs.Trigger>
             <Tabs.Trigger value='blog'>
-              <Button variant='ghost'>
+              <div className='flex items-center gap-x-2'>
                 <CgWebsite />
                 <Text color='gray'>Blog</Text>
-              </Button>
+              </div>
             </Tabs.Trigger>
           </Tabs.List>
 
