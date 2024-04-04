@@ -1,3 +1,4 @@
+import ProfileContainer from '@/components/profile/ProfileContainer';
 import React from 'react';
 
 type Props = {};
@@ -7,13 +8,7 @@ const ProjectLayout = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return (
-    <section>
-      <nav>NAV SAS</nav>
-
-      {children}
-    </section>
-  );
+  return <section>{children}</section>;
 };
 
 export default ProjectLayout;

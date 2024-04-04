@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.className} `}>
-        <Theme accentColor='iris' panelBackground='solid'>
-          <div className='max-w-7xl  mx-auto'>
+        <Theme accentColor='iris' hasBackground>
+          <div className='max-w-7xl  mx-auto '>
             <header>
-              <div className='flex w-full '>
+              <div className='flex w-full  '>
                 <Header />
               </div>
             </header>

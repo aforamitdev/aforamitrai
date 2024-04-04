@@ -1,67 +1,47 @@
 'use client';
 import Footer from '@/components/footer/Footer';
-import Header from '@/components/headers/Header';
 import Email from '@/components/hire/Email';
 import HireMe from '@/components/hire/HireMe';
-import ScreenCard from '@/components/home/ScreenCard';
-import Profile from '@/components/profile/Profile';
 import ProfileContainer from '@/components/profile/ProfileContainer';
-import Project from '@/components/projects/Project';
 import ProjectContainer from '@/components/projects/ProjectContainer';
-import SmoothScrolling from '@/components/scroll/SmootScroll';
-import {
-  Avatar,
-  Box,
-  Button,
-  Card,
-  Container,
-  Flex,
-  Grid,
-  Inset,
-  Text,
-  ThemePanel,
-} from '@radix-ui/themes';
-import Link from 'next/link';
-import { BsLinkedin, BsTwitter } from 'react-icons/bs';
-
-import {
-  GoChevronRight,
-  GoCopy,
-  GoDotFill,
-  GoPlusCircle,
-} from 'react-icons/go';
+import { Text } from '@radix-ui/themes';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main className='  mx-auto  font-poppins flex'>
-      {/* <ThemePanel /> */}
+    <AnimatePresence mode='popLayout' initial>
+      <motion.div initial={{ y: '-20vw' }} animate={{ y: 0 }}>
+        <main className='  mx-auto  font-poppins flex'>
+          {/* <ThemePanel /> */}
 
-      <div className='flex flex-col w-full'>
-        <div className='flex  flex-col '>
-          <ProfileContainer />
-          <ProjectContainer />
-        </div>
-        <div className='flex flex-col'>
-          <div className='py-10  '>
-            <div className='flex justify-center flex-col items-center'>
-              <div>
-                <Text color='gray' size={'8'} weight={'medium'}>
-                  Lets work together.
-                </Text>
+          <div className='flex flex-col w-full'>
+            <div className='flex  flex-col '>
+              <ProfileContainer />
+              <ProjectContainer />
+            </div>
+            <div className='flex flex-col'>
+              <div className='py-10  '>
+                <div className='flex justify-center flex-col items-center'>
+                  <div>
+                    <Text color='gray' size={'8'} weight={'medium'}>
+                      Lets work together.
+                    </Text>
+                  </div>
+                  <div className='text-gray-700  tracking-widest'>
+                    Creating unmatched product experience.
+                  </div>
+                  <div className='mt-5 flex gap-x-3'>
+                    <HireMe />
+                    <Email />
+                  </div>
+                </div>
               </div>
-              <div className='text-gray-700  tracking-widest'>
-                Creating unmatched product experience.
-              </div>
-              <div className='mt-5 flex gap-x-3'>
-                <HireMe />
-                <Email />
-              </div>
+
+              <Footer />
             </div>
           </div>
-
-          <Footer />
-        </div>
-      </div>
-    </main>
+        </main>
+      </motion.div>
+    </AnimatePresence>
   );
 }

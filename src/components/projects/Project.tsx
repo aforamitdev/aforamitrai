@@ -1,4 +1,5 @@
 import { Avatar, Card, Inset, Text } from '@radix-ui/themes';
+import Link from 'next/link';
 import React from 'react';
 import { GoChevronRight } from 'react-icons/go';
 
@@ -11,34 +12,36 @@ type Props = {
 const ProjectCard = ({ title, metaData, link }: Props) => {
   return (
     <Card className=' shadow-xl hover:ring-4'>
-      <Inset className='py-4 px-4  '>
-        <div className='flex justify-between items-center '>
-          <div className='flex items-center gap-x-5'>
-            <div>
-              <Avatar
-                fallback='K'
-                radius='full'
-                size={'5'}
-                src={link}
-                className='hover:ring-8 ring-gray-100'
-              />
-            </div>
-            <div>
-              <div className='font-medium'>
-                <Text color='iris'>{title}</Text>
+      <Link href={'/projects/project-one'}>
+        <Inset className='py-4 px-4  '>
+          <div className='flex justify-between items-center '>
+            <div className='flex items-center gap-x-5'>
+              <div>
+                <Avatar
+                  fallback='K'
+                  radius='full'
+                  size={'5'}
+                  src={link}
+                  className='hover:ring-8 ring-gray-100'
+                />
               </div>
               <div>
-                <Text color='gray' className='text-sm'>
-                  {metaData.join(',')}{' '}
-                </Text>
+                <div className='font-medium'>
+                  <Text color='iris'>{title}</Text>
+                </div>
+                <div>
+                  <Text color='gray' className='text-sm'>
+                    {metaData.join(',')}{' '}
+                  </Text>
+                </div>
               </div>
             </div>
+            <div>
+              <GoChevronRight />
+            </div>
           </div>
-          <div>
-            <GoChevronRight />
-          </div>
-        </div>
-      </Inset>
+        </Inset>
+      </Link>
     </Card>
   );
 };

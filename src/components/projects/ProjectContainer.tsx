@@ -3,12 +3,15 @@ import Link from 'next/link';
 import React from 'react';
 import { GoChevronRight, GoDotFill } from 'react-icons/go';
 import Project from './Project';
+import { useRouter } from 'next/router';
+import { useParams, usePathname } from 'next/navigation';
 
 type Props = {};
 
 function ProjectContainer({}: Props) {
+  const path = usePathname();
   return (
-    <div className='flex pt-10  items-center '>
+    <div className={`flex items-center ${path === '/' ? 'py-10' : ''}`}>
       <Card className='w-full '>
         <Inset className='bg-gray-200 px-5 py-4'>
           <Box
