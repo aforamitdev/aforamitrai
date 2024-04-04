@@ -5,10 +5,13 @@ import { Card, Flex } from '@radix-ui/themes';
 import HireMe from '../hire/HireMe';
 import Email from '../hire/Email';
 import GithubFeed from './github/GithubFeed';
+import ActivityFeed from './ActivityFeed';
 
-type Props = {};
+type Props = {
+  show: boolean;
+};
 
-function ProfileContainer({}: Props) {
+function ProfileContainer({ show }: Props) {
   return (
     <>
       <div className='flex justify-between gap-x-4 '>
@@ -34,7 +37,7 @@ function ProfileContainer({}: Props) {
           </Flex>
         </Card>
         <Card className='w-full'>
-          <GithubFeed />
+          <ActivityFeed />
         </Card>
       </div>
     </>

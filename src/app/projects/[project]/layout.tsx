@@ -1,14 +1,17 @@
-import ProfileContainer from '@/components/profile/ProfileContainer';
+'use client';
+import AppContextProvider from '@/Providers/AppProvider';
 import React from 'react';
-
-type Props = {};
 
 const ProjectLayout = ({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
 }) => {
-  return <section>{children}</section>;
+  return (
+    <section>
+      <AppContextProvider>{children}</AppContextProvider>
+    </section>
+  );
 };
 
 export default ProjectLayout;

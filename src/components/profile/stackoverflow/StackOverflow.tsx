@@ -18,21 +18,12 @@ import PostTag from './PostTag';
 import { FaMedal } from 'react-icons/fa';
 import { time_ago } from '@/helpers/timeago';
 import { IoCheckmarkDoneCircle } from 'react-icons/io5';
+import { useAppProvide } from '@/Providers/AppProvider';
 
 type Props = {};
 
 function StackOverflow({}: Props) {
-  const [feedData, setData] = useState<IStackOverFlow[]>([]);
-  const getData = async () => {
-    const response = await fetch(
-      'https://api.stackexchange.com/2.3/users/10148612/timeline?sort=creation&page=1&pagesize=100&site=stackoverflow'
-    );
-    const feed = await response.json();
-    setData(feed.items);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+  const { stackOverflow } = useAppProvide();
   return (
     <div>
       <ScrollArea
@@ -40,7 +31,7 @@ function StackOverflow({}: Props) {
         scrollbars='vertical'
         style={{ height: '300px' }}
       >
-        {feedData
+        {stackOverflow
           ?.filter((s) => s.timeline_type !== 'revision')
           .map((post, i) => {
             return (

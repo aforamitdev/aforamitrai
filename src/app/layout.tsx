@@ -5,6 +5,7 @@ import '@radix-ui/themes/styles.css';
 import { Card, Theme, ThemePanel } from '@radix-ui/themes';
 import { AnimatePresence } from 'framer-motion';
 import Header from '@/components/headers/Header';
+import Footer from '@/components/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,6 +32,9 @@ export default function RootLayout({
             <div className='flex w-full flex-col'>
               <div className='mx-4 py-2'>
                 <Card>{children}</Card>
+                <div className='py-5'>
+                  <Footer />
+                </div>
               </div>
             </div>
           </div>

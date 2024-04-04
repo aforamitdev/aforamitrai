@@ -27,13 +27,6 @@ const Profile = (props: Props) => {
             fill
           />
         </div>
-        {/* <Avatar
-          src='/projects/profile2.jpg'
-          fallback='AR'
-          size={'9'}
-          radius='full'
-          className='ring-2 ring-gray-300'
-        ></Avatar> */}
       </Flex>
     </div>
   );

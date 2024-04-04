@@ -22,9 +22,9 @@ const page = (props: Props) => {
               <motion.div
                 initial={{ height: '300px' }}
                 animate={{ height: 0 }}
-                exit={{ height: 0 }}
+                transition={{ delay: 1 }}
               >
-                <ProfileContainer />
+                <ProfileContainer show={false} />
               </motion.div>
 
               <ProjectContainer />
@@ -46,8 +46,6 @@ const page = (props: Props) => {
                   </div>
                 </div>
               </div>
-
-              <Footer />
             </div>
           </div>
         </main>

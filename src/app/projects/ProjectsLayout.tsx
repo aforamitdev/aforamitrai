@@ -7,13 +7,7 @@ const ProjectsLayout = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return (
-    <section>
-      <nav>NAV SAS</nav>
-
-      {children}
-    </section>
-  );
+  return <section>{children}</section>;
 };
 
 export default ProjectsLayout;
