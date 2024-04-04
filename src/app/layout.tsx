@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import '@radix-ui/themes/styles.css';
-import { Theme, ThemePanel } from '@radix-ui/themes';
+import { Card, Theme, ThemePanel } from '@radix-ui/themes';
 import { AnimatePresence } from 'framer-motion';
+import Header from '@/components/headers/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,9 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} `}>
         <Theme accentColor='iris' panelBackground='solid'>
-          {children}
+          <div className='max-w-7xl  mx-auto'>
+            <header>
+              <div className='flex w-full '>
+                <Header />
+              </div>
+            </header>
+            <div className='flex w-full flex-col'>
+              <div className='mx-4 py-2'>
+                <Card>{children}</Card>
+              </div>
+            </div>
+          </div>
         </Theme>
       </body>
     </html>

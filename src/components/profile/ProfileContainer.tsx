@@ -28,7 +28,7 @@ function ProfileContainer({}: Props) {
           </div>
           <Profile />
           {/* hire me  */}
-          <Flex className='flex gap-x-3 justify-between items-center'>
+          <Flex className='flex gap-x-3  items-center'>
             <HireMe />
             <Email />
           </Flex>

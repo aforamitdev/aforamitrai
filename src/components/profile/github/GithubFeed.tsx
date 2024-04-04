@@ -73,10 +73,10 @@ const GithubFeed = (props: Props) => {
                 <ScrollArea
                   type='always'
                   scrollbars='vertical'
-                  style={{ height: '242px' }}
+                  style={{ height: '300px' }}
                 >
-                  {feedData.length &&
-                    feedData.map((feed, index) => {
+                  {feedData?.length &&
+                    feedData?.map((feed, index) => {
                       return (
                         <div key={feed.id}>
                           <Commits commit={feed} index={index} />

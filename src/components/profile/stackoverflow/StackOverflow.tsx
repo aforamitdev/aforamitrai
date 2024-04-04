@@ -38,10 +38,10 @@ function StackOverflow({}: Props) {
       <ScrollArea
         type='always'
         scrollbars='vertical'
-        style={{ height: '242px' }}
+        style={{ height: '300px' }}
       >
         {feedData
-          .filter((s) => s.timeline_type !== 'revision')
+          ?.filter((s) => s.timeline_type !== 'revision')
           .map((post, i) => {
             return (
               <div key={i} className=' border-t px-5'>
