@@ -1,5 +1,4 @@
 'use client';
-import Footer from '@/components/footer/Footer';
 import Email from '@/components/hire/Email';
 import HireMe from '@/components/hire/HireMe';
 import ProfileContainer from '@/components/profile/ProfileContainer';

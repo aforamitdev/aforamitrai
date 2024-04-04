@@ -1,22 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { IGithubFeed } from '../../../../types/type';
-import {
-  Badge,
-  Box,
-  Button,
-  IconButton,
-  Inset,
-  ScrollArea,
-  SegmentedControl,
-  Tabs,
-  Text,
-} from '@radix-ui/themes';
-import { GoDotFill } from 'react-icons/go';
-import Comments from './Commits';
+import React from 'react';
+import { Box, ScrollArea, Text } from '@radix-ui/themes';
+
 import Commits from './Commits';
-import { BsGithub, BsStackOverflow } from 'react-icons/bs';
-import { CgWebsite } from 'react-icons/cg';
-import StackOverflow from '../stackoverflow/StackOverflow';
+
 import { useAppProvide } from '@/Providers/AppProvider';
 
 type Props = {};
