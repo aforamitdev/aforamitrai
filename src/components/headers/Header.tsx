@@ -5,7 +5,7 @@ import { CgProfile } from 'react-icons/cg';
 import { GoProjectSymlink } from 'react-icons/go';
 import { RiHome6Line } from 'react-icons/ri';
 import HeaderLink from './HeaderLink';
-import HireMe from '../hire/HireMe';
+import HireMe from '../shared/hire/HireMe';
 
 type Props = {};
 

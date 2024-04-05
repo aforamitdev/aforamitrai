@@ -2,8 +2,8 @@ import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import Profile from './Profile';
 import { Card, Flex } from '@radix-ui/themes';
-import HireMe from '../hire/HireMe';
-import Email from '../hire/Email';
+import HireMe from '../shared/hire/HireMe';
+import Email from '../shared/hire/Email';
 import GithubFeed from './github/GithubFeed';
 import ActivityFeed from './ActivityFeed';
 

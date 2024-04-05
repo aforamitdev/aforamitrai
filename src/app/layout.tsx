@@ -33,7 +33,7 @@ export default function RootLayout({
               <div className='flex w-full flex-col'>
                 <div className='mx-4 py-2'>
                   <Card>{children}</Card>
-                  <div className='py-5'>
+                  <div className='py-4'>
                     <Footer />
                   </div>
                 </div>
