@@ -1,4 +1,6 @@
-import callout from './callout.markdoc.ts';
+// import callout from './callout.markdoc.ts';
+
+const callout = require('./callout.markdoc');
 
 const config = {
   tags: {
