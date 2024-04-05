@@ -1,10 +1,6 @@
+'use client';
 import React, { Children } from 'react';
-import ProfileContainer from '../profile/ProfileContainer';
-import ProjectContainer from '../projects/ProjectContainer';
-import HireMe from '../shared/hire/HireMe';
-import Email from '../shared/hire/Email';
-import Footer from '../footer/Footer';
-import { Text } from '@radix-ui/themes';
+
 import LetsWorkTogether from '../shared/work/LetsWorkTogether';
 
 type Props = {

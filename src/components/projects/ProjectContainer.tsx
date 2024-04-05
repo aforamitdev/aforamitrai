@@ -1,10 +1,10 @@
+'use client';
 import { Box, Button, Card, Inset, Text } from '@radix-ui/themes';
 import Link from 'next/link';
 import React from 'react';
 import { GoChevronRight, GoDotFill } from 'react-icons/go';
 import Project from './Project';
-import { useRouter } from 'next/router';
-import { useParams, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 type Props = {};
 
