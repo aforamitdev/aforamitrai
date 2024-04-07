@@ -11,8 +11,6 @@ function CalloutRenderer({
   children: React.ReactNode;
   type: string;
 }) {
-  console.log(children);
-  console.log(title);
   return (
     <Callout.Root>
       <Callout.Icon>

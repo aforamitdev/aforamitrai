@@ -18,7 +18,7 @@ const Page = (props: Props) => {
   const [liveEditor, setLiveEditor] = useState<string>('');
   const [l, setL] = useState({});
   const getData = async () => {
-    const response = await fetch(`/api/projects/${path.project}`);
+    const response = await fetch(`/api/projects?snapped=true`);
     const data = await response.json();
     console.log(data, 'CONTENT');
     setContent(data.response);
@@ -28,12 +28,6 @@ const Page = (props: Props) => {
     getData();
   }, []);
 
-  useEffect(() => {
-    const ast = Markdoc.parse(liveEditor);
-    const content = Markdoc.transform(ast, config);
-    setL(content || {});
-  }, [liveEditor]);
-
   if (!content) {
     return <>Loadinf...</>;
   }
@@ -42,11 +36,7 @@ const Page = (props: Props) => {
     <div>
       <AnimatePresence mode='popLayout' initial>
         <main className='mx-auto  font-poppins flex'>
-          <HomeProject>
-            <ProjectPage>
-              <ContentRenderer content={content} />
-            </ProjectPage>
-          </HomeProject>
+          <ContentRenderer content={content} />
         </main>
       </AnimatePresence>
     </div>
