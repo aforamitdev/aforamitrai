@@ -20,7 +20,6 @@ const Page = (props: Props) => {
   const getData = async () => {
     const response = await fetch(`/api/projects?snapped=true`);
     const data = await response.json();
-    console.log(data, 'CONTENT');
     setContent(data.response);
   };
 

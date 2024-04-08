@@ -7,7 +7,7 @@ import Header from '@/components/headers/Header';
 import Footer from '@/components/footer/Footer';
 import AppContextProvider from '@/Providers/AppProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Amitkumar rai ',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} `}>
+      <body className={inter.variable}>
         <AppContextProvider>
           <Theme accentColor='iris' hasBackground>
             <div className='max-w-7xl  mx-auto '>
