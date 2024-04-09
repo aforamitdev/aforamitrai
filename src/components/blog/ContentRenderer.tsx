@@ -1,8 +1,9 @@
-import Markdoc, { RenderableTreeNodes } from '@markdoc/markdoc';
-import React from 'react';
-import CalloutRenderer from './element/CalloutRender';
-import InfoRenderer from './element/InfoRenderer';
+import Markdoc, { Node, RenderableTreeNodes, Tag } from '@markdoc/markdoc';
+import React, { Children, useEffect, useState } from 'react';
+import CalloutRenderer from '../MarkDocExtenations/Callout/CalloutRender';
+import InfoRenderer from '../MarkDocExtenations/Info/InfoRenderer';
 import config from '@/schema/config';
+import InfoElement from '../MarkDocExtenations/Info/InfoElement';
 
 type Props = {
   content: RenderableTreeNodes;
@@ -12,9 +13,15 @@ const ContentRenderer = (props: Props) => {
   const components = {
     CalloutRenderer,
     InfoRenderer,
+    InfoElement,
   };
-  const ast = Markdoc.parse(props.content);
+  if (!props.content) {
+    return <></>;
+  }
+  const ast = Markdoc.parse(props.content || '');
+
   const content = Markdoc.transform(ast, config);
+
   // console.log(content, 'content');
   return (
     <div className='px-2'>
