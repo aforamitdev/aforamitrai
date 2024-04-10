@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { Callout, Card } from '@radix-ui/themes';
-import { FaInfo } from 'react-icons/fa';
 
-function InfoElement({
+function InfoList({
   children,
   title,
   description,
@@ -19,4 +17,4 @@ function InfoElement({
   );
 }
 
-export default InfoElement;
+export default InfoList;

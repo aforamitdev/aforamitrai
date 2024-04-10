@@ -1,7 +1,7 @@
-import { Node, Tag, NodeType } from '@markdoc/markdoc';
+import { Schema } from '@markdoc/markdoc';
 
-const InfoElement: Node = {
-  render: 'InfoElement',
+const InfoElement: Schema = {
+  render: 'InfoList',
   attributes: {
     description: {
       type: String,

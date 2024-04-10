@@ -1,13 +1,7 @@
-import { Node, Tag, NodeType } from '@markdoc/markdoc';
+import { Schema } from '@markdoc/markdoc';
 
-const Info: Node = {
-  render: 'InfoRenderer',
-  type: 'item',
-  attributes: {
-    name: {
-      type: String,
-    },
-  },
+const Info: Schema = {
+  render: 'Info',
 };
 
 module.exports = Info;

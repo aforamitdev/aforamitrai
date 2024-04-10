@@ -1,9 +1,10 @@
-import Markdoc, { Node, RenderableTreeNodes, Tag } from '@markdoc/markdoc';
-import React, { Children, useEffect, useState } from 'react';
-import CalloutRenderer from '../MarkDocExtenations/Callout/CalloutRender';
-import InfoRenderer from '../MarkDocExtenations/Info/InfoRenderer';
+import React from 'react';
+import Markdoc, { RenderableTreeNodes, Tag } from '@markdoc/markdoc';
+import CalloutRenderer from '../Editor/Callout/CalloutRender';
+import Info from '../Editor/Info/Info';
+import InfoList from '../Editor/Info/InfoList';
+import MImage from '../Editor/Image/MImage';
 import config from '@/schema/config';
-import InfoElement from '../MarkDocExtenations/Info/InfoElement';
 
 type Props = {
   content: RenderableTreeNodes;
@@ -12,14 +13,12 @@ type Props = {
 const ContentRenderer = (props: Props) => {
   const components = {
     CalloutRenderer,
-    InfoRenderer,
-    InfoElement,
+    Info,
+    InfoList,
+    MImage,
   };
-  if (!props.content) {
-    return <></>;
-  }
-  const ast = Markdoc.parse(props.content || '');
 
+  const ast = Markdoc.parse(props.content);
   const content = Markdoc.transform(ast, config);
 
   // console.log(content, 'content');
