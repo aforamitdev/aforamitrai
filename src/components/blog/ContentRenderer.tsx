@@ -4,6 +4,8 @@ import CalloutRenderer from '../Editor/Callout/CalloutRender';
 import Info from '../Editor/Info/Info';
 import InfoList from '../Editor/Info/InfoList';
 import MImage from '../Editor/Image/MImage';
+import MAvatar from "../Editor/Image/MAvatar"
+import Break from "../Editor/Break"
 import config from '@/schema/config';
 
 type Props = {
@@ -13,9 +15,11 @@ type Props = {
 const ContentRenderer = (props: Props) => {
   const components = {
     CalloutRenderer,
-    Info,
     InfoList,
+    Info,
     MImage,
+    MAvatar,
+    Break
   };
 
   const ast = Markdoc.parse(props.content);

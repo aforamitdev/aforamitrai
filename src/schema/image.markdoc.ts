@@ -1,13 +1,28 @@
-import { Schema } from '@markdoc/markdoc';
+import { Config, Schema } from '@markdoc/markdoc';
+
+class ImageScr {
+  validate(value: string, config: Config) {
+    if (value.startsWith('https://')) {
+      return [
+        {
+          id: 'image-src',
+          level: 'error',
+          message: 'all image should containe full ',
+        },
+      ];
+    }
+    return [];
+  }
+}
 
 const Image: Schema = {
   render: 'MImage',
   attributes: {
     height: {
-      type: String,
+      type: Number,
     },
     width: {
-      type: String,
+      type: Number,
     },
     row: {
       type: Boolean,
@@ -17,6 +32,7 @@ const Image: Schema = {
     },
     src: {
       type: String,
+      required: true,
     },
     tw: {
       type: String,

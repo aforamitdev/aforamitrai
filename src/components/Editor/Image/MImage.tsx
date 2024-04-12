@@ -1,31 +1,34 @@
+/* eslint-disable @next/next/no-img-element */
+import { AspectRatio } from "@radix-ui/themes";
 import Image from 'next/image';
 import React from 'react';
 
 const MImage = ({
   children,
-  height = '100%',
-  width = '100%',
-  row,
+  height = 1,
+  width = 1,
   altText,
   src,
-  tw,
 }: {
   children: React.ReactNode;
-  height: string;
-  width: string;
+  height: number;
+  width: number;
   row: string;
   altText: string;
   src: string;
   tw: String;
 }) => {
-  console.log(children, height, width, row, altText);
   return (
-    <div>
-      <div>{altText}</div>
-      <div className={`relative ${tw}`}>
-        <Image src={src} fill className={`absolute`} alt={altText} />
-      </div>
-    </div>
+    <AspectRatio ratio={height / width} >
+      <img src={src} style={{
+        objectFit: 'cover',
+        width: '100%',
+        height: '100%',
+        borderRadius: 'var(--radius-2)',
+      }}
+
+        alt={altText} />
+    </AspectRatio>
   );
 };
 
