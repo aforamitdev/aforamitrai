@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import '@radix-ui/themes/styles.css';
-import { Card, Theme } from '@radix-ui/themes';
+import { Card, Inset, Theme } from '@radix-ui/themes';
 import Header from '@/components/headers/Header';
 import Footer from '@/components/footer/Footer';
 import AppContextProvider from '@/Providers/AppProvider';
@@ -32,7 +32,11 @@ export default function RootLayout({
               </header>
               <div className='flex w-full flex-col'>
                 <div className='mx-4 py-2'>
-                  <Card>{children}</Card>
+                  <Card>
+                    <Inset>
+                      {children}
+                    </Inset>
+                  </Card>
                   <div className='py-4'>
                     <Footer />
                   </div>

@@ -6,6 +6,7 @@ import { GoProjectSymlink } from 'react-icons/go';
 import { RiHome6Line } from 'react-icons/ri';
 import HeaderLink from './HeaderLink';
 import HireMe from '../shared/hire/HireMe';
+import Link from "next/link";
 
 type Props = {};
 
@@ -21,16 +22,22 @@ const Header = (props: Props) => {
           </Text> */}
         </div>
         <div className='flex gap-x-6'>
+
           <HeaderLink
             Icon={<RiHome6Line size='22' />}
             title='Amit Rai'
             link='/'
           />
+
+
           <HeaderLink
             Icon={<CgProfile size='22' />}
             title='About'
             link='/about'
           />
+
+
+
           <HeaderLink
             Icon={<GoProjectSymlink size='22' />}
             title='Projects'

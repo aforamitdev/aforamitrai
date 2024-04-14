@@ -26,7 +26,7 @@ function editorDidMount(editor: editor.IStandaloneCodeEditor, monaco: Monaco) {
 
 const Index = ({ setContent }: Props) => {
     return (
-        <Editor height='100%' language="markdown" onChange={(e) => setContent(e || '')} onMount={editorDidMount} />
+        <Editor height='100%' language="markdown" options={{ lineNumbersMinChars: 2 }} onChange={(e) => setContent(e || '')} onMount={editorDidMount} />
     )
 }
 
