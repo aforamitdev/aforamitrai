@@ -42,6 +42,14 @@ export const makeSuggestion = (
         monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
       range,
     },
+    {
+      label: 'upload',
+      kind: monaco.languages.CompletionItemKind.Snippet,
+      insertText: ['{%upload /%}', ''].join('\n'),
+      insertTextRules:
+        monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+      range,
+    },
   ];
   return suggestions;
 };

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { RenderableTreeNodes } from '@markdoc/markdoc';
-import { Avatar, Card, Inset } from '@radix-ui/themes';
+import { Avatar, Button, Card, Inset } from '@radix-ui/themes';
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "../ui/ResizablePanel";
 import * as Toolbar from '@radix-ui/react-toolbar';
 import './style.css';
@@ -13,6 +13,10 @@ import { IoSaveSharp } from "react-icons/io5";
 import { BiBold, BiItalic, BiSolidImage, BiStrikethrough } from "react-icons/bi";
 import MonacoEditor from "./MonacoEditor/index"
 import ContentRenderer from "./MonacoEditor/ContentRenderer";
+import PopDialog from "../Dialog/PopDialog";
+import { ref, uploadBytes } from "firebase/storage";
+import { storage } from "@/firebase/config";
+import { slugify } from "@/helpers/slugify";
 type Props = {};
 
 
@@ -23,50 +27,48 @@ const McEditor = (props: Props) => {
 
   const defaultLayout = [265, 440, 655];
   const navCollapsedSize = 5;
+  const [metadata, setMetaData] = useState({ slug: "", type: "blog" })
+
+  const onSave = () => {
+    console.log(metadata, content)
+    if (metadata.slug) {
+
+      const filepath = `/posts/${slugify(metadata.slug)}.md`
+
+      const meta = {
+        ...metadata,
+        contentType: "text/markdown"
+      }
+      const textEncoder = new TextEncoder()
+      if (content) {
+
+        const onBytes = textEncoder.encode(content as string)
+        console.log(onBytes)
+        const fileRef = ref(storage, filepath)
+        uploadBytes(fileRef, onBytes, { ...meta }).then(snapShot => {
+          console.log(snapShot)
+        }).catch(err => {
+          console.log(err)
+        })
+        console.log(filepath)
+      }
+    }
+
+  }
 
   return (
     <>
       <div className="py-2 gap-y-1.5 flex flex-col">
 
-        <div className=" px-2">
-          <Toolbar.Root className="ToolbarRoot" aria-label="Formatting options">
-            <Toolbar.ToggleGroup type="multiple" aria-label="Text formatting">
-              <Toolbar.ToggleItem className="ToolbarToggleItem" value="bold" aria-label="Bold">
-                <BiBold />
-              </Toolbar.ToggleItem>
-              <Toolbar.ToggleItem className="ToolbarToggleItem" value="italic" aria-label="Italic">
-                <BiItalic />
-              </Toolbar.ToggleItem>
-              <Toolbar.ToggleItem
-                className="ToolbarToggleItem"
-                value="strikethrough"
-                aria-label="Strike through"
-              >
-                <BiStrikethrough />
-              </Toolbar.ToggleItem>
-            </Toolbar.ToggleGroup>
-            <Toolbar.Separator className="ToolbarSeparator" />
-            <Toolbar.ToggleGroup type="single" defaultValue="center" aria-label="Text alignment">
-              <Toolbar.ToggleItem className="ToolbarToggleItem" value="left" aria-label="Left aligned">
-                {/* < /> */}
-              </Toolbar.ToggleItem>
-              <Toolbar.ToggleItem className="ToolbarToggleItem" value="center" aria-label="Center aligned">
-                {/* <TextAlignCenterIcon /> */}
-              </Toolbar.ToggleItem>
-              <Toolbar.ToggleItem className="ToolbarToggleItem" value="right" aria-label="Right aligned">
-                {/* <TextAlignRightIcon /> */}
-              </Toolbar.ToggleItem>
-            </Toolbar.ToggleGroup>
-            <Toolbar.Separator className="ToolbarSeparator" />
-            <Toolbar.Link className="ToolbarLink" href="#" target="_blank" style={{ marginRight: 10 }}>
-              Edited 2 hours ago
-            </Toolbar.Link>
-
-          </Toolbar.Root>
+        <div className=" px-2 flex  items-center gap-x-3">
+          <ToolsBar />
+          <PopDialog setMetaData={setMetaData} metadata={metadata} />
+          <div onClick={onSave}>
+            <SaveBar />
+          </div>
 
         </div>
         <div className="mx-2 ">
-
           <Card >
 
             <Inset className="h-96">
@@ -131,3 +133,47 @@ const McEditor = (props: Props) => {
 };
 
 export default McEditor;
+
+
+const ToolsBar = () => {
+  return <Toolbar.Root className="ToolbarRoot" aria-label="Formatting options">
+    <Toolbar.ToggleGroup type="multiple" aria-label="Text formatting">
+      <Toolbar.ToggleItem className="ToolbarToggleItem" value="bold" aria-label="Bold">
+        <BiBold />
+      </Toolbar.ToggleItem>
+      <Toolbar.ToggleItem className="ToolbarToggleItem" value="italic" aria-label="Italic">
+        <BiItalic />
+      </Toolbar.ToggleItem>
+      <Toolbar.ToggleItem
+        className="ToolbarToggleItem"
+        value="strikethrough"
+        aria-label="Strike through"
+      >
+        <BiStrikethrough />
+      </Toolbar.ToggleItem>
+    </Toolbar.ToggleGroup>
+    <Toolbar.Separator className="ToolbarSeparator" />
+    <Toolbar.ToggleGroup type="single" defaultValue="center" aria-label="Text alignment">
+      <Toolbar.ToggleItem className="ToolbarToggleItem" value="left" aria-label="Left aligned">
+        {/* < /> */}
+      </Toolbar.ToggleItem>
+      <Toolbar.ToggleItem className="ToolbarToggleItem" value="center" aria-label="Center aligned">
+        {/* <TextAlignCenterIcon /> */}
+      </Toolbar.ToggleItem>
+      <Toolbar.ToggleItem className="ToolbarToggleItem" value="right" aria-label="Right aligned">
+        {/* <TextAlignRightIcon /> */}
+      </Toolbar.ToggleItem>
+    </Toolbar.ToggleGroup>
+    <Toolbar.Separator className="ToolbarSeparator" />
+    <Toolbar.Link className="ToolbarLink" href="#" target="_blank" style={{ marginRight: 10 }}>
+      Edited 2 hours ago
+    </Toolbar.Link>
+
+  </Toolbar.Root>
+}
+
+const SaveBar = () => {
+  return <Button>
+    <BsSave2 /> Save
+  </Button>
+}

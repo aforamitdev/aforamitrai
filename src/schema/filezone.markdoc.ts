@@ -1,14 +1,19 @@
-module.exports = {
+import { Schema } from '@markdoc/markdoc';
+
+const fileZone: Schema = {
   render: 'FileZone',
   attributes: {
     fileName: {
       type: String,
-      require: true,
+      required: true,
     },
     folder: {
       type: String,
       matches: ['posts', 'projects'],
-      require: true,
+      required: true,
     },
   },
+  selfClosing: true,
 };
+
+module.exports = fileZone;
