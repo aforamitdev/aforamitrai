@@ -30,7 +30,7 @@ function HomeProject({
   return (
     <>
       <div className='w-full'>
-        <div className='flex  flex-col'>
+        <div className='flex  flex-col '>
           <AnimatePresence>
             <motion.div
               variants={path === '/' ? homePageVariant : projectPageVariant}

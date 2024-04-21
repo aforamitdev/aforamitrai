@@ -15,22 +15,26 @@ const Page = (props: Props) => {
   const [content, setContent] = useState(undefined);
   const [liveEditor, setLiveEditor] = useState<string>('');
   const [l, setL] = useState({});
-  const getData = async () => {
-    // const response = await fetch(`/api/projects/${path.project}`);
-    // const data = await response.json();
-    // console.log(data, 'CONTENT');
-    // setContent(data.response);
-  };
+  //   const getData = async () => {
+  // const response = await fetch(`/api/projects/${path.project}`);
+  // const data = await response.json();
+  // console.log(data, 'CONTENT');
+  // setContent(data.response);
+  //   };
 
   useEffect(() => {
-    getData();
+    // getData();
   }, []);
 
-  useEffect(() => {
-    const ast = Markdoc.parse(liveEditor);
-    const content = Markdoc.transform(ast, config);
-    setL(content || {});
-  }, [liveEditor]);
+  //   useEffect(() => {
+  //     const ast = Markdoc.parse(liveEditor);
+  //     const content = Markdoc.transform(ast, config);
+  //     setL(content || {});
+  //   }, [liveEditor]);
+
+  //   if (!content) {
+  //     return <>Loadinf...</>;
+  //   }
 
   return (
     <div>

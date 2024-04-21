@@ -14,7 +14,7 @@ function FileZone({ }: Props) {
     const fileDrop = (files: FileList[]) => {
 
         const imageRef = ref(storage, "")
-        uploadBytes(imageRef, files[0])
+        // uploadBytes(imageRef, files[0])
     }
     return (
         <>

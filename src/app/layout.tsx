@@ -24,25 +24,26 @@ export default function RootLayout({
       <body className={inter.variable}>
         <AppContextProvider>
           <Theme accentColor='iris' hasBackground>
-            <div className='max-w-7xl  mx-auto '>
-              <header>
-                <div className='flex w-full  '>
-                  <Header />
-                </div>
-              </header>
-              <div className='flex w-full flex-col'>
-                <div className='mx-4 py-2'>
-                  <Card>
-                    <Inset>
+            <Inset className='bg-slate-100 min-h-screen'>
+              <div className='max-w-7xl  mx-auto  '>
+                <header>
+                  <div className='flex w-full  '>
+                    <Header />
+                  </div>
+                </header>
+                <div className='flex w-full flex-col'>
+                  <div className='mx-7 py-2 mt-5 shadow-md'>
+                    <Card variant='ghost' className='bg-white'>
                       {children}
-                    </Inset>
-                  </Card>
-                  <div className='py-4'>
-                    <Footer />
+                    </Card>
+
+                    {/* <div className='py-4'>
+                      <Footer />
+                    </div> */}
                   </div>
                 </div>
               </div>
-            </div>
+            </Inset>
           </Theme>
         </AppContextProvider>
       </body>

@@ -45,11 +45,11 @@ const PopDialog = ({ setMetaData, metadata }: Props) => {
                     <fieldset className=" items-center gap-5 flex relative">
 
 
-                        <Select.Root defaultValue="blog" value={metadata.type} onValueChange={e => setMetaData(data => ({ ...data, type: e }))}>
+                        <Select.Root defaultValue="blogs" value={metadata.type} onValueChange={e => setMetaData(data => ({ ...data, type: e }))}>
                             <Select.Trigger variant="soft" color="iris" className=" px-2 py-1.5 rounded-sm relative w-full" />
                             <Select.Content position="popper" >
-                                <Select.Item value="blog">Blog Post</Select.Item>
-                                <Select.Item value="project">Project</Select.Item>
+                                <Select.Item value="blogs">Blog Post</Select.Item>
+                                <Select.Item value="projects">Project</Select.Item>
                             </Select.Content>
                         </Select.Root>
                     </fieldset>
