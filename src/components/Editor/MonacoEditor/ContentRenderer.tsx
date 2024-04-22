@@ -4,11 +4,11 @@ import CalloutRenderer from '../Callout/CalloutRender';
 import Info from '../Info/Info';
 import InfoList from '../Info/InfoList';
 import MImage from '../Image/MImage';
-import MAvatar from "../Image/MAvatar"
-import Break from "../Break"
+import MAvatar from '../Image/MAvatar';
+import Break from '../Break';
 import config from '@/schema/config';
-import FileZone from "../FileZone/FileZone"
-
+import FileZone from '../FileZone/FileZone';
+import ShowCase from '../ShowCase/ShowCase';
 type Props = {
   content: RenderableTreeNodes;
 };
@@ -21,7 +21,8 @@ const ContentRenderer = (props: Props) => {
     MImage,
     MAvatar,
     Break,
-    FileZone
+    FileZone,
+    ShowCase,
   };
 
   const ast = Markdoc.parse(props.content || '');

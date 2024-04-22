@@ -6,7 +6,8 @@ export const addFile = async (
   fileName: string,
   uniqueId: string,
   postType: 'posts' | 'projects',
-  content: ''
+  content: '',
+  folder: string
 ) => {
   if (!fileName && !uniqueId && !postType) {
     alert('missing file ');
@@ -21,6 +22,7 @@ export const addFile = async (
     const Meta = {
       id: uniqueId,
       postType,
+      folder,
     };
     const meta = {
       uniqueId,

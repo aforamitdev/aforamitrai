@@ -11,19 +11,9 @@ import {
   Text,
   TextField,
 } from '@radix-ui/themes';
-import {
-  FullMetadata,
-  StorageReference,
-  getBlob,
-  getBytes,
-  getDownloadURL,
-  list,
-  listAll,
-  ref,
-} from 'firebase/storage';
+import { FullMetadata, list, ref } from 'firebase/storage';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { BiLogoSass } from 'react-icons/bi';
 import { GiArtificialHive } from 'react-icons/gi';
 
 type Props = {};
@@ -125,9 +115,10 @@ const AddNew = ({
   const [title, setTitle] = useState('');
   const [postType, setPostType] = useState<'posts' | 'projects'>('posts');
   const [uniqueId, setUnique] = useState('');
+  const [folder, setFolder] = useState('');
 
   const saveFile = () => {
-    addFile(title, uniqueId, postType, '').then((e) => {
+    addFile(title, uniqueId, postType, '', folder).then((e) => {
       setOpen(false);
     });
   };
@@ -165,6 +156,16 @@ const AddNew = ({
               value={uniqueId}
               placeholder='16b7cea1-f4e6-4091-99ab-2e99b969907b'
               onChange={(e) => setUnique(e.target.value)}
+            />
+          </div>
+          <div>
+            <Text as='div' size='2' mb='1' weight='bold'>
+              Folder
+            </Text>
+            <TextField.Root
+              value={folder}
+              placeholder='Folder'
+              onChange={(e) => setFolder(e.target.value)}
             />
           </div>
 
