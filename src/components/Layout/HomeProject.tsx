@@ -23,10 +23,6 @@ function HomeProject({
   const [variant, setVariant] = useState('');
   const path = usePathname();
 
-  useEffect(() => {
-    console.log(path);
-  }, []);
-
   return (
     <>
       <div className='w-full'>

@@ -5,8 +5,7 @@ import ProjectPage from '@/components/projects/ProjectPage';
 import HomeProject from '@/components/Layout/HomeProject';
 import { useParams, usePathname } from 'next/navigation';
 import { Editor } from '@monaco-editor/react';
-import Markdoc from '@markdoc/markdoc';
-import config from '@/schema/config';
+import { MDXEditor } from '@mdxeditor/editor';
 
 type Props = {};
 
@@ -26,11 +25,7 @@ const Page = (props: Props) => {
     getData();
   }, []);
 
-  useEffect(() => {
-    const ast = Markdoc.parse(liveEditor);
-    const content = Markdoc.transform(ast, config);
-    setL(content || {});
-  }, [liveEditor]);
+  useEffect(() => {}, [liveEditor]);
 
   return (
     <div>
@@ -39,7 +34,12 @@ const Page = (props: Props) => {
           <HomeProject>
             <ProjectPage>
               {/* <ContentRenderer content={content} /> */}
-              as
+              <div className='h-screen'>
+                <MDXEditor
+                  markdown='# Hello World'
+                  onChange={(markdown) => console.log(markdown)}
+                />
+              </div>
             </ProjectPage>
           </HomeProject>
         </main>

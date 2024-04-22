@@ -7,12 +7,13 @@ type Props = {
   title: string;
   metaData: string[];
   link: string;
+  url: string;
 };
 
-const ProjectCard = ({ title, metaData, link }: Props) => {
+const ProjectCard = ({ title, metaData, link, url }: Props) => {
   return (
     <Card className=' shadow-xl hover:ring-4'>
-      <Link href={'/projects/project-one'}>
+      <Link href={url}>
         <Inset className='py-4 px-4  '>
           <div className='flex justify-between items-center '>
             <div className='flex items-center gap-x-5'>
@@ -53,26 +54,31 @@ const Project = () => {
         title='KatanaPIM'
         metaData={['Product Development', 'Webapps']}
         link='/projects/katana.jpg'
+        url='/projects/katana'
       />
       <ProjectCard
         title='Tuktu'
         metaData={['Product Development', 'NFT']}
         link='/projects/tuktuk.webp'
+        url='/projects/tuktuk'
       />
       <ProjectCard
         title='Pela'
         metaData={['Product Development', 'NFT']}
         link='/projects/pela.webp'
+        url='/projects/pela'
       />
       <ProjectCard
         title='Powerkick'
         metaData={['Product Development', 'SPA', 'PWA']}
         link='/projects/powerkickcorp.jpg'
-      />{' '}
+        url='/projects/powerkick'
+      />
       <ProjectCard
         title='Valores'
         metaData={['Product Development', 'NFT']}
         link='/projects/valoris.webp'
+        url='/projects/valoris'
       />
     </div>
   );

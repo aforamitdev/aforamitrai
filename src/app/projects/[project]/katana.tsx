@@ -4,9 +4,7 @@ import React, { useEffect, useState } from 'react';
 import ProjectPage from '@/components/projects/ProjectPage';
 import HomeProject from '@/components/Layout/HomeProject';
 import { useParams, usePathname } from 'next/navigation';
-import { Editor } from '@monaco-editor/react';
-import Markdoc from '@markdoc/markdoc';
-import config from '@/schema/config';
+import { MDXEditor } from '@mdxeditor/editor';
 
 type Props = {};
 
@@ -42,8 +40,8 @@ const Page = (props: Props) => {
         <main className='mx-auto  font-poppins flex'>
           <HomeProject>
             <ProjectPage>
-              {/* <ContentRenderer content={content} /> */}
               as
+              {/* <ContentRenderer content={content} /> */}
             </ProjectPage>
           </HomeProject>
         </main>
