@@ -7,8 +7,8 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className='bg-gray-200 rounded-lg flex justify-between px-4 py-5'>
-      <div className='flex items-center text-base text-gray-700'>
+    <div className='bg-white  shadow-sm rounded-lg flex justify-between px-4 py-2 mx-4'>
+      <div className='flex items-center text-base text-gray-900'>
         <GoDotFill />
         Follow Me
       </div>

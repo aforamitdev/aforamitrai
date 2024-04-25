@@ -36,11 +36,10 @@ export default function RootLayout({
                     <Card variant='ghost' className='bg-white'>
                       {children}
                     </Card>
-
-                    {/* <div className='py-4'>
-                      <Footer />
-                    </div> */}
                   </div>
+                </div>
+                <div className='py-4'>
+                  <Footer />
                 </div>
               </div>
             </Inset>
