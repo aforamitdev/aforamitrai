@@ -6,7 +6,7 @@ type Props = {};
 
 const Profile = (props: Props) => {
   return (
-    <div className='w-full flex justify-between pt-10'>
+    <div className='w-full flex justify-between pt-10 '>
       <Flex direction={'column'} className='w-4/5 py-4'>
         <Text size={'8'} weight={'medium'}>
           {"I'm Amit Rai"}

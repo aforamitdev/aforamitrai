@@ -54,31 +54,31 @@ const Project = () => {
         title='KatanaPIM'
         metaData={['Product Development', 'Webapps']}
         link='/projects/katana.jpg'
-        url='/projects/katana'
+        url='/p/katanapim'
       />
       <ProjectCard
         title='Tuktu'
         metaData={['Product Development', 'NFT']}
         link='/projects/tuktuk.webp'
-        url='/projects/tuktuk'
+        url='/p/tuktuk'
       />
       <ProjectCard
         title='Pela'
         metaData={['Product Development', 'NFT']}
         link='/projects/pela.webp'
-        url='/projects/pela'
+        url='/p/pela'
       />
       <ProjectCard
         title='Powerkick'
         metaData={['Product Development', 'SPA', 'PWA']}
         link='/projects/powerkickcorp.jpg'
-        url='/projects/powerkick'
+        url='/p/powerkick'
       />
       <ProjectCard
         title='Valores'
         metaData={['Product Development', 'NFT']}
         link='/projects/valoris.webp'
-        url='/projects/valoris'
+        url='/p/valoris'
       />
     </div>
   );

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from '@/components/footer/Footer';
+import PIntro from '@/components/projects/components/Intro/PIntro';
 import PHeaderTags from '@/components/projects/components/ProjectHeader/PHeaderTags';
 import LetsWorkTogether from '@/components/shared/work/LetsWorkTogether';
 import { Arrow } from '@radix-ui/react-popover';
@@ -22,8 +23,10 @@ const Page = (props: Props) => {
           <PHeaderTags title='Year' value='2023' />
           <PHeaderTags title='Project Type' value='Web App, SaaS, PIM' />
         </div>
-        <div className='px-4 text-gray-900'>
-          <h1 className='text-3xl font-bold my-5'>Katana PIM</h1>
+
+        <div className='px-4 pt-5'>
+          <PIntro title='Katana PIM' imageUrl='/projects/katana.jpg' />
+
           <div>
             <p>
               KatanaPIM's Centralize all your product data and give your entire
@@ -44,13 +47,12 @@ const Page = (props: Props) => {
                 height={'100px'}
                 autoPlay
                 loop
-                className='bg-slate-100 px-2 py-2 rounded-sm'
+                className='bg-slate-100 px-2 py-2 flex  rounded-sm'
               >
                 <source src='/projects/workflow.mp4' type='video/mp4'></source>
               </video>
             </div>
           </div>
-
           {/* content */}
           <div>
             <h2 className='text-2xl font-bold'>The katanaPIM's Story</h2>
@@ -73,7 +75,6 @@ const Page = (props: Props) => {
               </p>
             </div>
           </div>
-
           {/* my role */}
           <div className='bg-slate-100 px-2 py-2 rounded-sm my-5'>
             <img src={'/projects/katanad.png'} />
@@ -94,7 +95,7 @@ const Page = (props: Props) => {
               reliable and scalable codebase. (Hi, Typescript 👋 )
             </p>
             <p className='pb-2'>
-              My Role, was to update and add new feature to the application
+              My role, was to update and add new feature to the application
               using
               <b> ReactJs and Typescript</b>,
               <b>
@@ -104,7 +105,7 @@ const Page = (props: Props) => {
               , <b> Migrating Razor pages to ReactJS SPA.</b>
             </p>
           </div>
-          <div className='pt-10'>
+          <div className='py-20'>
             <LetsWorkTogether />
           </div>
         </div>

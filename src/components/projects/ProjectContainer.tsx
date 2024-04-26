@@ -13,7 +13,7 @@ function ProjectContainer({}: Props) {
   return (
     <div className={`flex items-center ${path === '/' ? 'py-10' : ''}`}>
       <Card className='w-full mx-2 mt-2' variant='ghost'>
-        <Inset className='bg-slate-100 px-5 py-4'>
+        <Inset className='bg-slate-100 px-5 py-4 '>
           <Box
             // style={{ backgroundColor: '#5151CD', opacity: 0.2 }}
             className='w-full  py-2  '
