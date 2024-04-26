@@ -79,4 +79,7 @@
     body {
       @apply bg-background text-foreground;
     }
+    .img-container{
+      @apply bg-slate-100 px-2 py-2 rounded-sm my-5 flex justify-center
+    }
   }
