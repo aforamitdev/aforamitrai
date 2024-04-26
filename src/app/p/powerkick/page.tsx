@@ -59,14 +59,14 @@ const page = (props: Props) => {
                 Phone is running out of battery and you need to immediately
                 charge it.
               </p>
-              <p className='py-2'>
+              <p>
                 Here comes the <b> powerkick;</b> with a single QR scan you can
                 rent a power bank from any of the 800+ mini powerkick power
                 stations across south korea.
               </p>
             </div>
 
-            <div>
+            <div className='pt-5'>
               <h2 className='text-2xl font-bold'>The Catch</h2>
               <p>
                 The phone have 2% juce, you got to install a application enter
