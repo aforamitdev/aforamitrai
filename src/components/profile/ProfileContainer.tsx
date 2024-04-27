@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import Profile from './Profile';
-import { Card, Flex } from '@radix-ui/themes';
+import { Card, Flex, Text } from '@radix-ui/themes';
 import HireMe from '../shared/hire/HireMe';
 import Email from '../shared/hire/Email';
 import ActivityFeed from './ActivityFeed';
@@ -18,14 +18,14 @@ function ProfileContainer({ show }: Props) {
           <div className='flex justify-between py-3'>
             <div className='flex items-center text-base text-gray-700'>
               <GoDotFill />
-              Product Developer
+              <Text>Product Developer</Text>
             </div>
             <div
-              className='text-xs uppercase  items-center flex px-2 rounded-full text-green-700  font-bold'
+              className='text-xs uppercase  items-center flex px-2 rounded-full text-green-700  font-semibold'
               style={{ background: 'rgba(40, 199, 128, 0.15)' }}
             >
               <GoDotFill />
-              Available for work
+              <Text>Available for work</Text>
             </div>
           </div>
           <Profile />

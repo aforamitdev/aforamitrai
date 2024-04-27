@@ -31,9 +31,7 @@ const ProjectCard = ({ title, metaData, link, url }: Props) => {
                   <Text color='iris'>{title}</Text>
                 </div>
                 <div>
-                  <Text color='gray' className='text-sm'>
-                    {metaData.join(',')}{' '}
-                  </Text>
+                  <Text className='text-sm'>{metaData.join(',')} </Text>
                 </div>
               </div>
             </div>
@@ -52,31 +50,31 @@ const Project = () => {
     <div className='space-y-4 py-3'>
       <ProjectCard
         title='KatanaPIM'
-        metaData={['Product Development', 'Webapps']}
+        metaData={['Product Development', ' Webapp']}
         link='/projects/katana.jpg'
         url='/p/katanapim'
       />
       <ProjectCard
+        title='Powerkick'
+        metaData={['Product Development', ' SPA', ' PWA']}
+        link='/projects/powerkickcorp.jpg'
+        url='/p/powerkick'
+      />
+      <ProjectCard
         title='Tuktu'
-        metaData={['Product Development', 'NFT']}
+        metaData={['Product Development', ' NFT']}
         link='/projects/tuktuk.webp'
         url='/p/tuktuk'
       />
       <ProjectCard
         title='Pela'
-        metaData={['Product Development', 'NFT']}
+        metaData={['Product Development', ' IOS', ' Android']}
         link='/projects/pela.webp'
         url='/p/pela'
       />
       <ProjectCard
-        title='Powerkick'
-        metaData={['Product Development', 'SPA', 'PWA']}
-        link='/projects/powerkickcorp.jpg'
-        url='/p/powerkick'
-      />
-      <ProjectCard
         title='Valores'
-        metaData={['Product Development', 'NFT']}
+        metaData={['Product Development', ' NFT']}
         link='/projects/valoris.webp'
         url='/p/valores'
       />
