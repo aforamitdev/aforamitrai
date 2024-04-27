@@ -30,8 +30,6 @@ function HomeProject({
           <AnimatePresence>
             <motion.div
               variants={path === '/' ? homePageVariant : projectPageVariant}
-              initial='start'
-              animate='end'
             >
               <ProfileContainer show={false} />
             </motion.div>

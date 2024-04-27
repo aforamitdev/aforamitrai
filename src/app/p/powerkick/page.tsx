@@ -78,7 +78,7 @@ const page = (props: Props) => {
               <h2 className='text-2xl font-bold'>The Solution</h2>
 
               {/* images */}
-              <div className='flex gap-x-3 justify-center'>
+              <div className='flex gap-x-3 justify-center flex-col md:flex-row'>
                 <div className='img-container'>
                   <img
                     src='/projects/powerkick/powerkick_1.png'
@@ -113,7 +113,9 @@ const page = (props: Props) => {
               </p>
               <p className='pt-3'>
                 Application would the display the nearest power stations to the
-                user, with number of powerbank in each power stations.
+                user, with number of powerbank in each power station. geo
+                fencing within 5m of the power station using browser ,
+                preventing unnecessary swapout .
               </p>
             </div>
           </div>

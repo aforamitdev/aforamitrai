@@ -13,7 +13,7 @@ type Props = {
 function ProfileContainer({ show }: Props) {
   return (
     <>
-      <div className='flex justify-between gap-x-4 px-2 '>
+      <div className='flex justify-between gap-x-4 px-2 flex-col md:flex-row gap-y-3 md:gap-y-0 '>
         <Card className='w-full'>
           <div className='flex justify-between py-3'>
             <div className='flex items-center text-base text-gray-700'>

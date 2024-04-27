@@ -78,7 +78,7 @@ const Project = () => {
         title='Valores'
         metaData={['Product Development', 'NFT']}
         link='/projects/valoris.webp'
-        url='/p/valoris'
+        url='/p/valores'
       />
     </div>
   );
