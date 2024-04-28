@@ -3,7 +3,6 @@ import path from 'path';
 import fs from 'fs';
 import Markdoc from '@markdoc/markdoc';
 import { NextRequest } from 'next/server';
-import config from '@/schema/config';
 const GET = async (request: NextRequest) => {
   const snapped = request.nextUrl.searchParams.get('snapped');
 
@@ -16,8 +15,6 @@ const GET = async (request: NextRequest) => {
       const text = fs.readFileSync(file, 'utf-8');
       const ast = Markdoc.parse(text);
       console.log(ast);
-      const parsed = Markdoc.transform(ast, config);
-      parseds.push(parsed);
       content.push(ast);
     });
   }
