@@ -70,34 +70,34 @@ function page({}: Props) {
           </Text>
         </div>
         <div className='flex gap-x-3 pt-4 '>
-          <ExpertisePop title='Typescript'>
+          <ExpertisePop title='Typescript' details=''>
             <i className='devicon-typescript-plain colored text-2xl'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='Javascript'>
+          <ExpertisePop title='Javascript' details=''>
             <i className='devicon-javascript-plain colored'></i>
           </ExpertisePop>
-          <ExpertisePop title='Dot net '>
+          <ExpertisePop title='Dot net ' details=''>
             <i className='devicon-dotnetcore-plain colored'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='Kubernetes'>
+          <ExpertisePop title='Kubernetes' details=''>
             <i className='devicon-kubernetes-plain colored'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='Docker'>
+          <ExpertisePop title='Docker' details=''>
             <i className='devicon-docker-plain colored'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='GoLang'>
+          <ExpertisePop title='GoLang' details=''>
             <i className='devicon-go-original-wordmark colored'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='Webpack'>
+          <ExpertisePop title='Webpack' details=''>
             <i className='devicon-webpack-plain colored'></i>
           </ExpertisePop>
 
-          <ExpertisePop title='Webpack'>
+          <ExpertisePop title='Git' details=''>
             <i className='devicon-git-plain colored'></i>
           </ExpertisePop>
         </div>

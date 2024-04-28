@@ -17,7 +17,7 @@ function ProjectContainer({}: Props) {
             // inset={'2'}
           >
             <div className='flex justify-between items-center'>
-              <div className='flex items-center text-base text-gray-700'>
+              <div className='flex items-center text-base text-gray-900'>
                 <GoDotFill /> <Text>Projects</Text>
               </div>
               <Link href={'/projects/'}>

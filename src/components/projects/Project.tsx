@@ -62,7 +62,7 @@ const Project = () => {
       />
       <ProjectCard
         title='Tuktu'
-        metaData={['Product Development', ' NFT']}
+        metaData={['Product Development', ' IOS', ' Android']}
         link='/projects/tuktuk.webp'
         url='/p/tuktuk'
       />

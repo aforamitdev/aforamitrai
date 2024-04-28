@@ -16,9 +16,10 @@ import React, { ReactNode } from 'react';
 type Props = {
   children: ReactNode;
   title: string;
+  details: string;
 };
 
-const ExpertisePop = ({ children, title }: Props) => {
+const ExpertisePop = ({ children, title, details }: Props) => {
   return (
     <Popover.Root>
       <Popover.Trigger>
@@ -31,7 +32,7 @@ const ExpertisePop = ({ children, title }: Props) => {
               {title}
             </Text>
             <Text as='div' size='2' color='gray'>
-              Engineering
+              {details}
             </Text>
           </Box>
         </Card>

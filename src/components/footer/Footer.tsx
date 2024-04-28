@@ -1,4 +1,5 @@
 import { Avatar } from '@radix-ui/themes';
+import Link from 'next/link';
 import React from 'react';
 import { BsLinkedin, BsTwitter, BsTwitterX } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
@@ -10,20 +11,24 @@ const Footer = (props: Props) => {
     <div className='bg-white  shadow-sm rounded-lg flex justify-between px-4 py-2 mx-4'>
       <div className='flex items-center text-base text-gray-900'>
         <GoDotFill />
-        Follow Me
+        Follow me
       </div>
       <div className='flex  items-center gap-x-3'>
-        <Avatar
-          className='border bg-white'
-          radius='full'
-          fallback={<BsTwitterX />}
-        />
+        <Link href='https://twitter.com/aforamitrai' target='_blank'>
+          <Avatar
+            size={'2'}
+            className='border bg-white'
+            fallback={<BsTwitterX />}
+          />
+        </Link>
 
-        <Avatar
-          className='border bg-white'
-          fallback={<BsLinkedin />}
-          radius='full'
-        />
+        <Link href='https://www.linkedin.com/in/aforamit/' target='_blank'>
+          <Avatar
+            size={'2'}
+            className='border bg-white'
+            fallback={<BsLinkedin />}
+          />
+        </Link>
       </div>
     </div>
   );

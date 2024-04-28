@@ -1,5 +1,6 @@
+'use client';
 import { Button } from '@radix-ui/themes';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { GoCopy } from 'react-icons/go';
 

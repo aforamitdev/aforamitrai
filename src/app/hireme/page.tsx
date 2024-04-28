@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import { Button, Text, TextArea, TextField } from '@radix-ui/themes';
+import { Avatar, Button, Text, TextArea, TextField } from '@radix-ui/themes';
 import React from 'react';
+import { BsTelegram } from 'react-icons/bs';
+import { FaTelegramPlane } from 'react-icons/fa';
+import { MdContactMail, MdContacts } from 'react-icons/md';
 
 type Props = {};
 
@@ -36,7 +39,10 @@ const page = (props: Props) => {
         </div>
          */}
         <div>
-          <div>
+          <div className='flex items-center gap-x-3'>
+            <div>
+              <Avatar fallback={<FaTelegramPlane />} radius='full' size={'4'} />
+            </div>
             <div className='py-5'>
               <div>
                 <Text className='text-3xl text-gray-800  font-semibold'>
@@ -72,7 +78,7 @@ const page = (props: Props) => {
                 <TextArea
                   placeholder='Message'
                   variant='soft'
-                  className='h-48'
+                  className='h-32'
                   name='message'
                 />
               </div>
