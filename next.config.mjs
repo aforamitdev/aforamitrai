@@ -2,7 +2,11 @@
 
 const nextConfig = {
   images: {
-    domains: ['pfpmaker.com', 'avatars.githubusercontent.com'],
+    domains: [
+      'pfpmaker.com',
+      'avatars.githubusercontent.com',
+      'framerusercontent.com',
+    ],
   },
 };
 

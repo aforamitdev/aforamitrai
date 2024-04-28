@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import '@radix-ui/themes/styles.css';
-import { Card, Theme } from '@radix-ui/themes';
+import { Card, Inset, Theme } from '@radix-ui/themes';
 import Header from '@/components/headers/Header';
 import Footer from '@/components/footer/Footer';
 import AppContextProvider from '@/Providers/AppProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Amitkumar rai ',
@@ -21,24 +21,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} `}>
+      <body className={inter.variable}>
         <AppContextProvider>
           <Theme accentColor='iris' hasBackground>
-            <div className='max-w-7xl  mx-auto '>
-              <header>
-                <div className='flex w-full  '>
-                  <Header />
-                </div>
-              </header>
-              <div className='flex w-full flex-col'>
-                <div className='mx-4 py-2'>
-                  <Card>{children}</Card>
-                  <div className='py-4'>
-                    <Footer />
+            <Inset className='bg-slate-100 min-h-screen'>
+              <div className='max-w-7xl  mx-auto  '>
+                <header>
+                  <div className='flex w-full  '>
+                    <Header />
+                  </div>
+                </header>
+                <div className='flex w-full flex-col'>
+                  <div className='mx-7 py-2 mt-5 shadow-md'>
+                    <Card variant='ghost' className='bg-white'>
+                      {children}
+                    </Card>
                   </div>
                 </div>
+                <div className='py-4'>
+                  <Footer />
+                </div>
               </div>
-            </div>
+            </Inset>
           </Theme>
         </AppContextProvider>
       </body>

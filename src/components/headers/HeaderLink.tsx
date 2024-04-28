@@ -7,6 +7,7 @@ type Props = {
   Icon: React.ReactElement;
   title: string;
   link: string;
+
 };
 
 const HeaderLink = ({ Icon, title, link }: Props) => {

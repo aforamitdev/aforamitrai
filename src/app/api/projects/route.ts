@@ -2,20 +2,28 @@ import { glob } from 'glob';
 import path from 'path';
 import fs from 'fs';
 import Markdoc from '@markdoc/markdoc';
-const GET = async (request: Request) => {
-  const dir = path.join(__dirname, '../../../../../data/projects/**/*.md');
-  const files = glob.sync(dir);
+import { NextRequest } from 'next/server';
+import config from '@/schema/config';
+const GET = async (request: NextRequest) => {
+  const snapped = request.nextUrl.searchParams.get('snapped');
 
-  const content = {};
+  const content: any[] = [];
+  const parseds: any[] = [];
+  if (snapped) {
+    const dir = path.join(__dirname, '../../../../../data/projects/**/*.md');
+    const files = glob.sync(dir);
+    files.map((file) => {
+      const text = fs.readFileSync(file, 'utf-8');
+      const ast = Markdoc.parse(text);
+      console.log(ast);
+      const parsed = Markdoc.transform(ast, config);
+      parseds.push(parsed);
+      content.push(ast);
+    });
+  }
+  // console.log(query);
 
-  files.map((file) => {
-    const rawText = fs.readFileSync(file, 'utf-8');
-    const ast = Markdoc.parse(rawText);
-
-    const content = Markdoc.transform(ast);
-    console.log(content);
-  });
-  return Response.json({ test: 'ok', files: [] });
+  return Response.json({ test: 'ok', files: content, parsed: parseds });
 };
 
 const POST = async (request: Request) => {

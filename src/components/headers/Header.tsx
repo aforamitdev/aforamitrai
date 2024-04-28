@@ -6,13 +6,14 @@ import { GoProjectSymlink } from 'react-icons/go';
 import { RiHome6Line } from 'react-icons/ri';
 import HeaderLink from './HeaderLink';
 import HireMe from '../shared/hire/HireMe';
+import Link from 'next/link';
 
 type Props = {};
 
 const Header = (props: Props) => {
   return (
     <>
-      <div className='flex justify-between  w-full  border mt-10 px-3 py-2 rounded-lg items-center  mx-4 '>
+      <div className='flex justify-between  w-full  border mt-10 px-3 py-2 rounded-lg items-center  mx-4 bg-white shadow-sm '>
         <div className='gap-x-2 flex items-center'>
           <Avatar fallback='AR' />
           {/*           
@@ -26,11 +27,13 @@ const Header = (props: Props) => {
             title='Amit Rai'
             link='/'
           />
+
           <HeaderLink
             Icon={<CgProfile size='22' />}
             title='About'
             link='/about'
           />
+
           <HeaderLink
             Icon={<GoProjectSymlink size='22' />}
             title='Projects'

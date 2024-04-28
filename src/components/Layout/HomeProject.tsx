@@ -23,19 +23,13 @@ function HomeProject({
   const [variant, setVariant] = useState('');
   const path = usePathname();
 
-  useEffect(() => {
-    console.log(path);
-  }, []);
-
   return (
     <>
       <div className='w-full'>
-        <div className='flex  flex-col'>
+        <div className='flex  flex-col '>
           <AnimatePresence>
             <motion.div
               variants={path === '/' ? homePageVariant : projectPageVariant}
-              initial='start'
-              animate='end'
             >
               <ProfileContainer show={false} />
             </motion.div>
