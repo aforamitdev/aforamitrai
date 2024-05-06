@@ -6,6 +6,7 @@ import { Card, Inset, Theme } from '@radix-ui/themes';
 import Header from '@/components/headers/Header';
 import Footer from '@/components/footer/Footer';
 import AppContextProvider from '@/Providers/AppProvider';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -46,6 +47,7 @@ export default function RootLayout({
           </Theme>
         </AppContextProvider>
       </body>
+      <GoogleAnalytics gaId='G-VZT7R52VQD' />
     </html>
   );
 }

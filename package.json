@@ -13,6 +13,7 @@
     "@markdoc/next.js": "^0.3.7",
     "@mdxeditor/editor": "^3.0.1",
     "@monaco-editor/react": "^4.6.0",
+    "@next/third-parties": "^14.2.3",
     "@radix-ui/react-popover": "1.0.7",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-toolbar": "^1.0.4",
