@@ -23,7 +23,4 @@ const GET = async (request: NextRequest) => {
   return Response.json({ test: 'ok', files: content, parsed: parseds });
 };
 
-const POST = async (request: Request) => {
-  console.log(request.body);
-};
 export { GET };

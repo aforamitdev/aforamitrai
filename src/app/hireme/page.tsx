@@ -1,10 +1,10 @@
+import ContactForm from '@/components/contact/ContactForm';
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { Avatar, Button, Text, TextArea, TextField } from '@radix-ui/themes';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsTelegram } from 'react-icons/bs';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { MdContactMail, MdContacts } from 'react-icons/md';
 
 type Props = {};
 
@@ -21,23 +21,6 @@ const page = (props: Props) => {
         />
       </div>
       <div className='w-full flex  items-center justify-center flex-col '>
-        {/*  */}
-
-        {/*  */}
-        {/* <div className=' justify-between py-3  '>
-          <div className='flex items-center text-base text-gray-700'>
-            <GoDotFill />
-            <Text>Product Developer</Text>
-          </div>
-          <div
-            className='text-xs uppercase  items-center flex px-2 rounded-full text-green-700  font-semibold'
-            style={{ background: 'rgba(40, 199, 128, 0.15)' }}
-          >
-            <GoDotFill />
-            <Text>Available for work</Text>
-          </div>
-        </div>
-         */}
         <div>
           <div className='flex items-center gap-x-3'>
             <div>
@@ -57,35 +40,7 @@ const page = (props: Props) => {
             </div>
           </div>
           <div className=' flex flex-col gap-y-4'>
-            <form name='contact' method='POST' data-netlify='true'>
-              <div className='flex justify-between gap-x-3'>
-                <TextField.Root
-                  variant='soft'
-                  size={'3'}
-                  placeholder='Name'
-                  className='w-full'
-                  name='name'
-                />
-                <TextField.Root
-                  variant='soft'
-                  size={'3'}
-                  placeholder='Email'
-                  className='w-full'
-                  name='email'
-                />
-              </div>
-              <div className='py-5'>
-                <TextArea
-                  placeholder='Message'
-                  variant='soft'
-                  className='h-32'
-                  name='message'
-                />
-              </div>
-              <Button size={'3'} type='submit' className='w-full'>
-                Submit
-              </Button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
