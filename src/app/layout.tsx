@@ -13,37 +13,37 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Amitkumar rai ',
-  description: 'AmitKumar rai -Product developer ',
+  description: 'AmitKumar rai -Product developer '
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.variable}>
         <Head>
-          <input type='hidden' name='form-name' value='contact' />
+          <input type="hidden" name="form-name" value="contact" />
         </Head>
         <AppContextProvider>
-          <Theme accentColor='iris' hasBackground>
-            <Inset className='bg-slate-100 min-h-screen'>
-              <div className='max-w-7xl  mx-auto  '>
+          <Theme accentColor="iris" hasBackground>
+            <Inset className="bg-slate-100 min-h-screen">
+              <div className="max-w-7xl  mx-auto  ">
                 <header>
-                  <div className='flex w-full  '>
+                  <div className="flex w-full  ">
                     <Header />
                   </div>
                 </header>
-                <div className='flex w-full flex-col'>
-                  <div className='mx-7 py-2 mt-5 shadow-md'>
-                    <Card variant='ghost' className='bg-white'>
+                <div className="flex w-full flex-col">
+                  <div className="mx-7 py-2 mt-5 shadow-md">
+                    <Card variant="ghost" className="bg-white">
                       {children}
                     </Card>
                   </div>
                 </div>
-                <div className='py-4'>
+                <div className="py-4">
                   <Footer />
                 </div>
               </div>
@@ -51,7 +51,7 @@ export default function RootLayout({
           </Theme>
         </AppContextProvider>
       </body>
-      <GoogleAnalytics gaId='G-VZT7R52VQD' />
+      <GoogleAnalytics gaId="G-VZT7R52VQD" />
     </html>
   );
 }

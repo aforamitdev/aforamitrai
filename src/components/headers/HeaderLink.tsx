@@ -7,14 +7,13 @@ type Props = {
   Icon: React.ReactElement;
   title: string;
   link: string;
-
 };
 
 const HeaderLink = ({ Icon, title, link }: Props) => {
   return (
     <Tooltip content={title}>
       <Link href={link}>
-        <IconButton radius='full' variant='ghost'>
+        <IconButton radius="full" variant="ghost">
           {Icon}
         </IconButton>
       </Link>
