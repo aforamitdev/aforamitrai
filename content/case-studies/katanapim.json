@@ -1,0 +1,65 @@
+{
+  "slug": "katanapim",
+  "title": "KatanaPIM — Scaling a PIM Platform for 60+ Clients",
+  "company": "KatanaPIM",
+  "role": "Sr. Software Developer",
+  "period": "Feb 2023 — Present",
+  "location": "Remote · India",
+  "summary": "Led the React migration of a legacy .NET MVC frontend, replaced Webpack with Rspack for a 65% build-time cut, bumped TypeScript 5 → 7, and containerized .NET Core services for Linux deployment on a PIM platform serving 60+ enterprise clients.",
+  "tags": [
+    "React",
+    "TypeScript",
+    "Rspack",
+    "Jotai",
+    "React-Query",
+    ".NET Core",
+    "Docker",
+    "MSSQL",
+    "GitLab CI"
+  ],
+  "impact": [
+    { "label": "Build time reduction", "value": "65%" },
+    { "label": "Enterprise clients", "value": "60+" },
+    { "label": "Product records managed", "value": "Millions" }
+  ],
+  "showcase": [
+    {
+      "src": "/case-studies/katanapim/mappings.svg",
+      "alt": "KatanaPIM feed-to-field mapping UI with 314 feed fields mapped to 26 KatanaPIM fields, including filters for multi-language, search, and specification groups.",
+      "caption": "Feed-to-PIM field mapping — 314 source fields mapped across 26 targets, with multi-language + overwrite rules per row."
+    },
+    {
+      "src": "/case-studies/katanapim/specifications.svg",
+      "alt": "KatanaPIM product edit screen showing Single Specifications group with Coil voltages, TDMB4-U200N Options and Keying code, plus a second specification group with a Gold plated contacts characteristic field.",
+      "caption": "Product edit UI — grouped single specifications, per-language overrides, and a right-rail quickview of content, specs, categories, SEO and attachments."
+    }
+  ],
+  "ogImage": "/og/katanapim.png",
+  "sections": [
+    {
+      "id": "context",
+      "heading": "Context",
+      "body": "KatanaPIM is a product information management platform that normalizes, enriches and distributes millions of product records across multiple e-commerce channels. By early 2023 the frontend was a maturing .NET MVC codebase with ad-hoc JavaScript — hard to evolve, slow to build, and expensive to onboard new engineers onto.\n\nI joined as a senior developer to modernize the stack without disrupting the 60+ enterprise clients already in production."
+    },
+    {
+      "id": "problem",
+      "heading": "Problem",
+      "body": "- **Frontend velocity was capped**: every feature required touching Razor views, jQuery, and bespoke plumbing.\n- **Build times kept growing**: Webpack builds pushed past the 3-minute mark, killing feedback loops.\n- **Deployment was brittle**: .NET Core services were deployed bare-metal with manual runbooks.\n- **Scale anxiety**: product data volumes were climbing faster than our tooling could keep up."
+    },
+    {
+      "id": "approach",
+      "heading": "Approach",
+      "body": "### 1. React migration, page by page\n\nRather than a big-bang rewrite, we ported screens incrementally to ReactJS behind the existing Razor shell. We co-located state with components using **Jotai** for fine-grained, testable atoms, and standardized server state on **React-Query** for caching, retries, and optimistic updates.\n\n### 2. Webpack → Rspack\n\nThe biggest quality-of-life win. Drop-in swap for our config, plus small tweaks to the module resolution to get parity. First cold builds dropped **from ~180s to ~60s — a 65% cut**. HMR became instant, and CI builds freed up capacity across the team.\n\n### 3. TypeScript 5 → 7 upgrade\n\nBumped the codebase from **TypeScript 5 to TypeScript 7**. Worked through the breaking changes — stricter type inference, updated `lib.d.ts` targets, and deprecated flags — module by module. Faster type-check on CI and cleaner error diagnostics in the editor paid back the migration cost quickly.\n\n### 4. Containerizing .NET Core for Linux\n\nI containerized the .NET Core services with Docker and aligned local + CI + production on Linux images. Deploys moved to GitLab CI pipelines, removing the \"works on my machine\" and cutting the cost of spinning up new environments.\n\n### 5. PIM feature work\n\nBuilt core PIM features: import/export workflows spanning multiple e-commerce platforms, bulk editing UIs over millions of rows, and rich relationship views for SKUs, variants and categories. Ran Scrum planning and epic meetings to keep backend + frontend + data teams aligned."
+    },
+    {
+      "id": "impact",
+      "heading": "Impact",
+      "body": "- **65% faster builds** — happier engineers, shorter CI cycles.\n- **React now powers** the critical PIM flows used by 60+ customers.\n- **Reliable, reproducible deploys** via Dockerized .NET Core on GitLab CI.\n- **Upgraded to TypeScript 7** — faster CI type-checks and sharper editor diagnostics across the React codebase.\n- **Foundations in place** for the next wave of product work — integrations, AI enrichment, and marketplace connectors."
+    },
+    {
+      "id": "takeaways",
+      "heading": "Takeaways",
+      "body": "- Incremental migration beats a rewrite when the business depends on the existing app every day.\n- Build tooling is leverage — cutting 2 minutes off every build pays for itself within a week.\n- Owning both frontend and deployment pipelines unlocked changes that would have stalled in silos."
+    }
+  ]
+}

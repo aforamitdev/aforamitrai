@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="KatanaPIM mappings UI placeholder">
+  <rect width="1600" height="900" fill="#f5f3ee"/>
+  <!-- left rail -->
+  <rect x="0" y="0" width="240" height="900" fill="#ffffff" stroke="#e5e3de"/>
+  <rect x="20" y="20" width="140" height="40" fill="#2563eb"/>
+  <text x="40" y="46" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Save</text>
+  <rect x="20" y="80" width="60" height="28" fill="#f5f3ee" stroke="#d9d5cf"/>
+  <text x="50" y="99" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#444">Mappings</text>
+  <rect x="90" y="80" width="78" height="28" fill="#ffffff" stroke="#d9d5cf"/>
+  <text x="129" y="99" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#777">Automap</text>
+  <text x="20" y="140" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#777">pproductexport.xls</text>
+  <text x="20" y="158" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#aaa">Feed Fields: 314 · Mappings: 26</text>
+  <g font-family="Inter, system-ui, sans-serif" font-size="11" fill="#444">
+    <text x="20" y="220">Overview</text>
+    <rect x="14" y="238" width="212" height="30" fill="#111"/>
+    <text x="24" y="258" fill="#fff" font-weight="600">Specifications</text>
+    <text x="20" y="300">Images</text>
+    <text x="20" y="340">Setup</text>
+  </g>
+
+  <!-- top bar -->
+  <rect x="260" y="10" width="260" height="32" fill="#ffffff" stroke="#d9d5cf"/>
+  <text x="280" y="31" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#aaa">Search</text>
+  <rect x="540" y="10" width="150" height="32" fill="#ffffff" stroke="#d9d5cf"/>
+  <text x="560" y="31" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#444">Multi-Language</text>
+  <rect x="710" y="10" width="170" height="32" fill="#2563eb"/>
+  <text x="795" y="31" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff">+ Add Specification</text>
+
+  <!-- table header -->
+  <rect x="260" y="70" width="1320" height="36" fill="#ffffff" stroke="#d9d5cf"/>
+  <g font-family="Inter, system-ui, sans-serif" font-size="11" fill="#333" font-weight="600">
+    <text x="280" y="93">KatanaPIM Fields</text>
+    <text x="620" y="93">Feed Fields</text>
+    <text x="960" y="93">Multi-language</text>
+    <text x="1120" y="93">Overwrite</text>
+    <text x="1240" y="93">Example</text>
+  </g>
+
+  <!-- rows -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="12" fill="#222">
+    <!-- generate 14 rows programmatically via repeated elements -->
+    <g>
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">Features</text>
+      <text x="620" y="136">Image1</text>
+      <rect x="955" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+      <rect x="1115" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+      <text x="1240" y="136" fill="#666" font-size="11">https://internal.katanapim.com/...thumbs/000/418_child_1.jpeg</text>
+    </g>
+  </g>
+
+  <g font-family="Inter, system-ui, sans-serif" font-size="12" fill="#222">
+    <!-- rows data -->
+    <g id="rows"></g>
+  </g>
+
+  <!-- Simulated stacked rows -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="12" fill="#222">
+    <g transform="translate(0,46)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">Coil voltages</text><text x="620" y="136">Spec_Poles</text>
+      <rect x="955" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+      <rect x="1115" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+    </g>
+    <g transform="translate(0,92)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">TDMB4-U200N Options</text><text x="620" y="136">Spec_Test_Options</text>
+      <rect x="955" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+      <rect x="1115" y="122" width="16" height="16" fill="#ffffff" stroke="#bbb"/>
+    </g>
+    <g transform="translate(0,138)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">TDMB4-U200N Keying code</text><text x="620" y="136">Spec_Icon_Raincover</text>
+    </g>
+    <g transform="translate(0,184)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Coil configuration</text><text x="620" y="136">Spec_Fabric_Description</text>
+    </g>
+    <g transform="translate(0,230)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Contact arrangement</text><text x="620" y="136">Spec_Walkingstick_Attachment</text>
+    </g>
+    <g transform="translate(0,276)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — PADS Reference</text><text x="620" y="136">Spec_Walkingstick_Attachment</text>
+    </g>
+    <g transform="translate(0,322)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Pin code</text><text x="620" y="136">Spec_Icon_Organiserinside</text>
+    </g>
+    <g transform="translate(0,368)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Plugboard</text><text x="620" y="136">ManufacturerPartNumber</text>
+    </g>
+    <g transform="translate(0,414)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Rating</text><text x="620" y="136">Spec_Breaststrap</text>
+    </g>
+    <g transform="translate(0,460)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Resistance of winding(s)</text><text x="620" y="136">Spec_MF_Waterbestendig</text>
+    </g>
+    <g transform="translate(0,506)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">General Characteristics — Weight</text><text x="620" y="136">Spec_outer_weight</text>
+    </g>
+    <g transform="translate(0,552)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">Specific Characteristics — AC Immunity</text><text x="620" y="136">Spec_item_material_content</text>
+    </g>
+    <g transform="translate(0,598)">
+      <rect x="260" y="108" width="1320" height="46" fill="#fafaf7" stroke="#eeeae3"/>
+      <text x="280" y="136">Specific Characteristics — DC Biasing</text><text x="620" y="136">Spec_Fabric_Lining</text>
+    </g>
+    <g transform="translate(0,644)">
+      <rect x="260" y="108" width="1320" height="46" fill="#ffffff" stroke="#eeeae3"/>
+      <text x="280" y="136">Electrical Characteristics — Full operate value</text><text x="620" y="136">Spec_item_material_content</text>
+    </g>
+  </g>
+
+  <!-- Footer label (placeholder) -->
+  <text x="1580" y="880" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#aaa">Placeholder — replace with real PNG</text>
+</svg>
