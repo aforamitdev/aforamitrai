@@ -3,8 +3,8 @@ import { getAllSlugs } from "@/lib/case-studies";
 
 const SITE = "https://amitrai.fyi";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const slugs = await getAllSlugs();
+export default function sitemap(): MetadataRoute.Sitemap {
+  const slugs = getAllSlugs();
   const now = new Date();
   return [
     { url: SITE, lastModified: now, changeFrequency: "monthly", priority: 1.0 },

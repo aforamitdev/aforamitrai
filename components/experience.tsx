@@ -51,7 +51,7 @@ export function Experience() {
         <div className="flex flex-col gap-6 border-b border-black/10 pb-8 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span className="size-1.5 bg-[var(--ink)]" /> Experience
+              <span className="size-1.5 bg-[var(--vivid)]" /> Experience
             </div>
             <h2 className="mt-4 max-w-xl font-heading text-4xl font-black leading-[1.05] tracking-tight md:text-5xl">
               Explore My Engineering

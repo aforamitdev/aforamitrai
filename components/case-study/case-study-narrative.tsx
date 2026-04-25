@@ -1,22 +1,17 @@
-import { marked } from "marked";
+import type { ReactNode } from "react";
 import { ArrowUpRightIcon, FileTextIcon } from "@phosphor-icons/react/dist/ssr";
-import type { CaseStudySection } from "@/lib/case-studies";
 
-marked.setOptions({ gfm: true, breaks: false, async: false });
+export type CaseStudyTocItem = { id: string; heading: string };
 
 export function CaseStudyNarrative({
   slug,
-  sections,
+  toc,
+  children,
 }: {
   slug: string;
-  sections: CaseStudySection[];
+  toc: CaseStudyTocItem[];
+  children: ReactNode;
 }) {
-  const rendered = sections.map((s) => ({
-    id: s.id,
-    heading: s.heading,
-    html: marked.parse(s.body) as string,
-  }));
-
   return (
     <section className="border-b border-black/10">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-[1fr_2.4fr] md:px-14 md:py-24">
@@ -28,7 +23,7 @@ export function CaseStudyNarrative({
             Problem, approach, impact.
           </h2>
           <nav className="mt-6 flex flex-col gap-2 text-xs text-muted-foreground">
-            {rendered.map((s) => (
+            {toc.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
@@ -49,16 +44,7 @@ export function CaseStudyNarrative({
         </aside>
 
         <div className="prose-cs max-w-none text-[15px] leading-relaxed text-foreground">
-          {rendered.map((s) => (
-            <section
-              key={s.id}
-              id={s.id}
-              className="scroll-mt-24 border-b border-black/5 pb-10 last:border-0 last:pb-0"
-            >
-              <h2 className="!mt-0">{s.heading}</h2>
-              <div dangerouslySetInnerHTML={{ __html: s.html }} />
-            </section>
-          ))}
+          {children}
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ export function Footer() {
             </div>
             <a
               href="mailto:hello@amitrai.fyi"
-              className="mt-4 block font-heading text-4xl font-black leading-[1.02] tracking-tight hover:text-white/70 md:text-7xl"
+              className="mt-4 block font-heading text-4xl font-black leading-[1.02] tracking-tight hover:text-[var(--vivid-on-dark)] md:text-7xl transition-colors"
             >
               hello
               <br />
@@ -27,7 +27,7 @@ export function Footer() {
               href="https://github.com/aforamitdev"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-white"
+              className="inline-flex flex-row-reverse items-center gap-2 hover:text-white"
             >
               <GithubLogoIcon size={14} weight="bold" /> GitHub
             </a>
@@ -35,7 +35,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/aforamitrai"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-white"
+              className="inline-flex flex-row-reverse items-center gap-2 hover:text-white"
             >
               <LinkedinLogoIcon size={14} weight="bold" /> LinkedIn
             </a>
@@ -48,6 +48,7 @@ export function Footer() {
             <span className="font-medium text-white">amit.rai</span>
             <a href="#about" className="hover:text-white">About</a>
             <a href="#work" className="hover:text-white">Work</a>
+            <a href="#open-source" className="hover:text-white">Open Source</a>
             <a href="#stack" className="hover:text-white">Stack</a>
           </div>
           <span>© {new Date().getFullYear()} Amit Rai. All rights reserved.</span>

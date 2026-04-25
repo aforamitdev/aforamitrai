@@ -9,7 +9,7 @@ export function CaseStudyHeader() {
           href="/"
           className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight"
         >
-          <span className="flex size-6 items-center justify-center bg-[var(--ink)] text-[10px] font-bold text-white">
+          <span className="flex size-6 items-center justify-center bg-[var(--vivid)] text-[10px] font-bold text-[var(--ink)]">
             A
           </span>
           amit.rai

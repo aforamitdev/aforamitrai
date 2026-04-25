@@ -6,7 +6,7 @@ export function About() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-[1fr_1.3fr]">
         <div className="border-black/10 p-8 md:border-r md:p-14">
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <span className="size-1.5 bg-[var(--ink)]" /> About Me
+            <span className="size-1.5 bg-[var(--vivid)]" /> About Me
           </div>
           <h2 className="mt-5 max-w-md font-heading text-3xl font-black leading-[1.05] tracking-tight md:text-4xl">
             I turn business problems into clean, shippable software.
@@ -23,7 +23,7 @@ export function About() {
               "Strong collaborator — Scrum, KT, epic planning",
             ].map((item) => (
               <li key={item} className="flex gap-3 text-foreground/80">
-                <span className="mt-2 h-px w-4 shrink-0 bg-[var(--ink)]" />
+                <span className="mt-2 h-px w-4 shrink-0 bg-[var(--vivid)]" />
                 {item}
               </li>
             ))}
@@ -32,13 +32,13 @@ export function About() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="border-b border-black/10 p-8 md:p-10">
-            <div className="font-heading text-5xl font-black tracking-tight">65%</div>
+            <div className="font-heading text-5xl tracking-tight text-[var(--ink)]">65%</div>
             <div className="mt-3 text-xs leading-relaxed text-muted-foreground">
               Reduction in build time after migrating Webpack → Rspack at KatanaPIM.
             </div>
           </div>
           <div className="border-b border-black/10 p-8 md:border-l md:p-10">
-            <div className="font-heading text-5xl font-black tracking-tight">800+</div>
+            <div className="font-heading text-5xl tracking-tight text-[var(--ink)]">800+</div>
             <div className="mt-3 text-xs leading-relaxed text-muted-foreground">
               EV stations across South Korea served by the Powerkick QR-code app.
             </div>

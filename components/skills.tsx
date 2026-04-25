@@ -10,7 +10,7 @@ export function Skills() {
     <section id="stack" className="border-b border-black/10">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-14 md:py-24">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="size-1.5 bg-[var(--ink)]" /> Stack
+          <span className="size-1.5 bg-[var(--vivid)]" /> Stack
         </div>
         <h2 className="mt-4 max-w-xl font-heading text-4xl font-black leading-[1.05] tracking-tight md:text-5xl">
           Tools I reach for.
@@ -28,7 +28,7 @@ export function Skills() {
               <ul className="mt-6 space-y-2 text-sm">
                 {g.items.map((item) => (
                   <li key={item} className="flex items-center gap-2 text-foreground/90">
-                    <span className="h-px w-3 bg-[var(--ink)]" />
+                    <span className="h-px w-3 bg-[var(--vivid)]" />
                     {item}
                   </li>
                 ))}

@@ -14,7 +14,7 @@ export function CaseStudyImpactRow({ impact }: { impact: CaseStudyImpact[] }) {
               : ""
           }`}
         >
-          <div className="font-heading text-5xl font-black tracking-tight text-foreground">
+          <div className="font-heading text-5xl tracking-tight text-[var(--ink)]">
             {m.value}
           </div>
           <div className="mt-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">

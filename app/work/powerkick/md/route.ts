@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { markdown } from "@/content/case-studies/katanapim";
+import { markdown } from "@/content/case-studies/powerkick";
 
 export function GET() {
   return new NextResponse(markdown, {
