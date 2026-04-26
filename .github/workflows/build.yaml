@@ -38,8 +38,8 @@ jobs:
           path: .
 
       - name: Update image tag
-        run: |
-		  ls 
+        run: |	
+          ls 
           cd infra/base/app
           kustomize edit set image docker.io/aforamitrai/portfolio=aforamitrai/portfolio:${{ github.sha }}
 
