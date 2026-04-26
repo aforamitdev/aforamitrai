@@ -29,3 +29,23 @@ jobs:
         run: |
           docker build -t aforamitrai/portfolio:${{ github.sha }} .
           docker push aforamitrai/portfolio:${{ github.sha }}
+
+      - name: Checkout infra repo
+        uses: actions/checkout@v4
+        with:
+          repository: aforamitdev/infra
+          token: ${{ secrets.GH_PAT }}
+          path: .
+
+      - name: Update image tag
+        run: |
+          cd infra/base/app
+          kustomize edit set image docker.io/aforamitrai/portfolio=aforamitrai/portfolio:${{ github.sha }}
+
+      - name: Commit & push changes
+        run: |
+          cd infra
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git commit -am "deploy: portfolio -> ${{ github.sha }}"
+          git push
