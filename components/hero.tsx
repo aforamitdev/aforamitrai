@@ -16,7 +16,7 @@ export function Hero() {
             <a href="#about" className="hover:text-[var(--ink)] text-foreground/70">About</a>
             <a href="#work" className="hover:text-[var(--ink)] text-foreground/70">Work</a>
             <a href="#open-source" className="hover:text-[var(--ink)] text-foreground/70">Open Source</a>
-            <a href="#stack" className="hover:text-[var(--ink)] text-foreground/70">Stack</a>
+            <a href="/stack" className="hover:text-[var(--ink)] text-foreground/70">Stack</a>
             <a href="#contact" className="hover:text-[var(--ink)] text-foreground/70">Contact</a>
           </nav>
           <a

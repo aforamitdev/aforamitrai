@@ -17,7 +17,6 @@ export function Footer() {
               <br />
               @amitrai.fyi
             </a>
-            <div className="mt-6 text-sm text-white/60">+91 8369686636</div>
           </div>
           <div className="flex flex-col gap-3 text-sm text-white/60 md:items-end">
             <a href="https://amitrai.fyi" target="_blank" rel="noopener noreferrer" className="hover:text-white">
@@ -49,7 +48,7 @@ export function Footer() {
             <a href="#about" className="hover:text-white">About</a>
             <a href="#work" className="hover:text-white">Work</a>
             <a href="#open-source" className="hover:text-white">Open Source</a>
-            <a href="#stack" className="hover:text-white">Stack</a>
+            <a href="/stack" className="hover:text-white">Stack</a>
           </div>
           <span>© {new Date().getFullYear()} Amit Rai. All rights reserved.</span>
         </div>

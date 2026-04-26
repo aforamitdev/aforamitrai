@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     { url: SITE, lastModified: now, changeFrequency: "monthly", priority: 1.0 },
+    { url: `${SITE}/stack`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     ...slugs.flatMap((slug) => [
       {
         url: `${SITE}/work/${slug}`,
