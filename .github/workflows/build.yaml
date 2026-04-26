@@ -40,7 +40,7 @@ jobs:
       - name: Update image tag
         run: |	
           ls 
-          cd infra/base/app
+          cd base/app
           kustomize edit set image docker.io/aforamitrai/portfolio=aforamitrai/portfolio:${{ github.sha }}
 
       - name: Commit & push changes
