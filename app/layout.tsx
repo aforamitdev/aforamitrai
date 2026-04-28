@@ -110,7 +110,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
-        <GoogleAnalytics gaId="G-YV9HEJLRM6" dataLayerName="main"/>
+        <GoogleAnalytics gaId="G-YV9HEJLRM6" />
         {children}
       </body>
     </html>
